@@ -1,0 +1,56 @@
+@import "../styles/Variables";
+
+$module: 'milk-button';
+
+.button-wrap {
+  display: inline;
+}
+button.#{$module} {
+  position:relative;
+  color: #126afb;
+  border-color: #126afb;
+  border-width: 2px;
+  font-size: 18px;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+  
+  .inner {
+    padding: 17px 21px 17px;
+  }
+
+  .diagonal {
+    width: 17px;
+    height: 17px;
+    border-bottom: 2px solid #126afb;
+    -webkit-transform:
+        translateY(20px)
+        translateX(5px)
+        rotate(-45deg);
+    position: absolute;
+    bottom: 22px;
+    left: -14px;
+    display: none;
+  }
+}
+
+button.#{$module}:hover {
+  padding: 0 0 10px 10px;
+  .inner {
+    border-left: 2px solid #126afb;
+    border-bottom: 2px solid #126afb;
+    padding: 14px 23px 10px 21px;
+  }
+  .diagonal {
+    display: block;
+  }
+}
+
+button.#{$module}:active {
+  .inner {
+    background-color: #126afb;
+    color: #fff;
+  }
+}
+
