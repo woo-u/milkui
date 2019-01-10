@@ -2,6 +2,13 @@
   "name": "milkui",
   "version": "0.1.0",
   "private": true,
+  "author": "Jeongwoo Ahn <guruahn@gmail.com>, Elisabet <elisabet517@naver.com>",
+  "main": "/lib/mtui.install.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woo-u/milkui.git"
+  },
+  "homepage": "https://github.com/woo-u/milkui",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
