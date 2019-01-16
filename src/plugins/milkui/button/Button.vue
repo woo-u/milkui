@@ -1,6 +1,6 @@
 <template>
   <div class="button-wrap" @click="handleClick">
-    <button type="button" class="milk-button" :disabled="disabled">
+    <button class="milk-button" :disabled="disabled">
       <div class="inner">Default Button</div>
       <div class="diagonal"></div>
     </button>

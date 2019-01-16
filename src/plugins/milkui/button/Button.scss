@@ -8,42 +8,47 @@ $module: 'milk-button';
 button.#{$module} {
   position:relative;
   color: #126afb;
-  border-color: #126afb;
-  border-width: 2px;
+  outline: none;
+  border: 2px solid #126afb;
+  font-weight: bold;
   font-size: 18px;
-  background: none;
+  padding: 0;
+
   &:focus {
     outline: none;
   }
   
   .inner {
-    padding: 17px 21px 17px;
+    padding: 17px 38px 17px;
+    //transition: padding 0.3s, border 0.3s;
   }
 
   .diagonal {
-    width: 17px;
-    height: 17px;
+    width: 0;
+    height: 1px;
     border-bottom: 2px solid #126afb;
-    -webkit-transform:
-        translateY(20px)
-        translateX(5px)
-        rotate(-45deg);
+    -webkit-transform: skewY(-45deg);
+    -webkit-transform-origin: left bottom;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
     position: absolute;
-    bottom: 22px;
-    left: -14px;
-    display: none;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    //transition: width 0.3s;
+    //transition-delay: ;
   }
 }
 
 button.#{$module}:hover {
-  padding: 0 0 10px 10px;
+  padding: 0 0 8px 8px;
   .inner {
     border-left: 2px solid #126afb;
     border-bottom: 2px solid #126afb;
-    padding: 14px 23px 10px 21px;
+    padding: 14px 34px 10px 32px;
   }
   .diagonal {
-    display: block;
+    width: 13px;
   }
 }
 
@@ -54,3 +59,19 @@ button.#{$module}:active {
   }
 }
 
+button.#{$module}:disabled {
+  background-color: #eceff1;
+  padding: 0;
+  color: #cfd8dc;
+  border-color: #cfd8dc;
+  cursor: not-allowed;
+  .inner {
+    padding: 17px 38px 17px;
+    border: 0;
+    background-color: #eceff1;
+    color: #cfd8dc;
+  }
+  .diagonal {
+    width: 0;
+  }
+}
