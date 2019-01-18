@@ -6,7 +6,7 @@ const components = [
 ]
 
 const MilkUI = {
-  install(Vue, options) {
+  install(Vue) {
     components.map(component => {
 			Vue.component(component.name, component)
 		})

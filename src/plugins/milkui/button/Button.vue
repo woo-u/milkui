@@ -1,10 +1,8 @@
 <template>
-  <div class="button-wrap" @click="handleClick">
-    <button class="milk-button" :disabled="disabled">
-      <div class="inner">Default Button</div>
-      <div class="diagonal"></div>
-    </button>
-  </div>
+  <button class="milk-button" :disabled="disabled" @click="handleClick">
+    <div class="inner"><slot></slot></div>
+    <div class="diagonal"></div>
+  </button>
 </template>
 <script>
 export default {
@@ -17,6 +15,11 @@ export default {
   },
   data(){
     return {}
+  },
+  methods: {
+    handleClick(evt){
+      this.$emit('click', evt)
+    }
   }
 }
 </script>

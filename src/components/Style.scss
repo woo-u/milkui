@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+}
+ul, li {
+	padding: 0;
+	list-style: none;
+}
+
+//layout
+#sidebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 215px;
+	border-right: solid 1px #f6f7fa;
+}
+
+#content {
+  margin: 0 auto;
+  margin-left: 216px;
+  margin-bottom: 80px;
+	padding: 0 10px;
+	padding-left: 64px;
+  padding-right: 64px;
+  overflow: hidden;
+	h2 {
+		border-bottom: 1px solid #90a4ae;
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 2;
+		color: #263238;
+  }
+  h3 {
+		padding-top: 8px;
+		margin-top: 61px;
+		margin-bottom: 32px;
+		font-size: 24px;
+		font-weight: normal;
+		clear: both;
+  }
+}

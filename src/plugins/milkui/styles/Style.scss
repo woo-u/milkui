@@ -1,0 +1,9 @@
+@import './Colors.scss';
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'noto sans', 'Roboto', 'Segoe UI', 'BlinkMacSystemFont','Malgun Gothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
