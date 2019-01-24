@@ -1,6 +1,6 @@
 <template>
   <div id="content" class="milk-color">
-    <h2>Colors</h2>
+    <h2 class="milk-font--title20">Colors</h2>
     <h3>Main color</h3>
     <color-box class="color-boxes" :colors="primaryColors" />
     <h3>Secondary colors</h3>

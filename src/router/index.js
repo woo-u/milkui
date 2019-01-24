@@ -1,8 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Colors from '@/components/Colors'
-import Buttons from '@/components/Buttons'
 
+const AsyncComponent = (component) => ({
+  // The component to load (should be a Promise)
+  component: import(/* webpackChunkName: "view-[request]" */'@/components/'+component),
+  // Delay before showing the loading component. Default: 200ms.
+  delay: 200,
+  // The error component will be displayed if a timeout is
+  // provided and exceeded. Default: Infinity.
+  timeout: 3000
+})
 
 Vue.use(Router)
 
@@ -12,18 +19,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Colors',
-      component: Colors
+      name: 'colors',
+      component: () => AsyncComponent('Colors'),
     },
     {
       path: '/colors',
-      name: 'Colors',
-      component: Colors
+      name: 'colors',
+      component: () => AsyncComponent('Colors'),
     },
     {
       path: '/buttons',
-      name: 'Buttons',
-      component: Buttons
+      name: 'buttons',
+      component: () => AsyncComponent('Buttons'),
+    },
+    {
+      path: '/Typography',
+      name: 'typography',
+      component: () => AsyncComponent('Typography'),
     },
     
   ]

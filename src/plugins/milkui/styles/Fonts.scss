@@ -1,0 +1,36 @@
+@import './Variables';
+
+$module: 'milk-font';
+
+body .#{$module} {
+  &--title30 {
+    font-size: $font-title30;
+  }
+  &--title20 {
+    font-size: $font-title20;
+  }
+  &--title10 {
+    font-size: $font-title10;
+  }
+  &--body20 {
+    font-size: $font-body20;
+  }
+  &--body10 {
+    font-size: $font-body10;
+  }
+  &--caption20 {
+    font-size: $font-caption20;
+  }
+  &--caption10 {
+    font-size: $font-caption10;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+  &--semi-bold {
+    font-weight: 600;
+  }
+  &--regular {
+    font-weight: normal;
+  }
+}

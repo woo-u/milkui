@@ -1,6 +1,6 @@
 <template>
   <div id="content" class="buttons">
-    <h2>Buttons</h2>
+    <h2 class="milk-font--title20">Buttons</h2>
     <div>
       <milk-button @click="handleClick">Default Button</milk-button>
       <milk-button disabled @click="handleClick">Milk Button</milk-button>
