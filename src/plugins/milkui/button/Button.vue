@@ -1,5 +1,5 @@
 <template>
-  <button class="milk-button" :disabled="disabled" @click="handleClick">
+  <button class="milk-button" :class="`milk-button--${type}`" :disabled="disabled" @click="handleClick">
     <div class="inner"><slot></slot></div>
     <div class="diagonal"></div>
   </button>
@@ -11,7 +11,11 @@ export default {
     disabled: {
 			type: Boolean,
 			default: false
-		},
+    },
+    type: {
+      type: String,
+      default: 'secondary'
+    }
   },
   data(){
     return {}

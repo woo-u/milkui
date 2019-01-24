@@ -1,11 +1,11 @@
 <template>
   <div id="content" class="milk-color">
     <h2 class="milk-font--title20">Colors</h2>
-    <h3>Main color</h3>
+    <h3 class="milk-font--title10">Main color</h3>
     <color-box class="color-boxes" :colors="primaryColors" />
-    <h3>Secondary colors</h3>
+    <h3 class="milk-font--title10">Secondary colors</h3>
     <color-box class="color-boxes" :colors="secondaryColors" />
-    <h3>Neutral colors</h3>
+    <h3 class="milk-font--title10">Neutral colors</h3>
     <color-box class="color-boxes" :colors="neutralColors" />
   </div>
 </template>
