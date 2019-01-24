@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'milk';
+  src:  url('../icon/milk.eot?u7a1vr');
+  src:  url('../icon/milk.eot?u7a1vr#iefix') format('embedded-opentype'),
+    url('../icon/milk.ttf?u7a1vr') format('truetype'),
+    url('../icon/milk.woff?u7a1vr') format('woff'),
+    url('../icon/milk.svg?u7a1vr#milk') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="mk-"], [class*=" mk-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'milk' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mk-arrow-circle-down:before {
+  content: "\e900";
+}
+.mk-arrow-circle-left:before {
+  content: "\e901";
+}
+.mk-arrow-circle-right:before {
+  content: "\e902";
+}
+.mk-arrow-circle-up:before {
+  content: "\e903";
+}
+.mk-bell:before {
+  content: "\e904";
+}
+.mk-bookmark:before {
+  content: "\e905";
+}
+.mk-calendar:before {
+  content: "\e906";
+}
+.mk-camera:before {
+  content: "\e907";
+}
+.mk-check:before {
+  content: "\e908";
+}
+.mk-chevron-down:before {
+  content: "\e909";
+}
+.mk-chevron-left:before {
+  content: "\e90a";
+}
+.mk-chevron-right:before {
+  content: "\e90b";
+}
+.mk-chevron-up:before {
+  content: "\e90c";
+}
+.mk-closed:before {
+  content: "\e90d";
+}
+.mk-cloud-download:before {
+  content: "\e90e";
+}
+.mk-cloud-upload:before {
+  content: "\e90f";
+}
+.mk-cloud:before {
+  content: "\e910";
+}
+.mk-cow:before {
+  content: "\e911";
+}
+.mk-edit:before {
+  content: "\e912";
+}
+.mk-ellipsis-h:before {
+  content: "\e913";
+}
+.mk-ellipsis-v:before {
+  content: "\e914";
+}
+.mk-envelope:before {
+  content: "\e915";
+}
+.mk-expand-arrows:before {
+  content: "\e916";
+}
+.mk-eye:before {
+  content: "\e917";
+}
+.mk-file:before {
+  content: "\e918";
+}
+.mk-filter:before {
+  content: "\e919";
+}
+.mk-folder-open:before {
+  content: "\e91a";
+}
+.mk-folder:before {
+  content: "\e91b";
+}
+.mk-glass-milk:before {
+  content: "\e91c";
+}
+.mk-globe:before {
+  content: "\e91d";
+}
+.mk-heart:before {
+  content: "\e91e";
+}
+.mk-image:before {
+  content: "\e91f";
+}
+.mk-information-circle:before {
+  content: "\e920";
+}
+.mk-lightbulb:before {
+  content: "\e921";
+}
+.mk-lock-open:before {
+  content: "\e922";
+}
+.mk-lock:before {
+  content: "\e923";
+}
+.mk-map-marker:before {
+  content: "\e924";
+}
+.mk-milk-drop:before {
+  content: "\e925";
+}
+.mk-minus:before {
+  content: "\e926";
+}
+.mk-mug-milk-cold:before {
+  content: "\e927";
+}
+.mk-mug-milk-hot:before {
+  content: "\e928";
+}
+.mk-pen:before {
+  content: "\e929";
+}
+.mk-plus:before {
+  content: "\e92a";
+}
+.mk-redo:before {
+  content: "\e92b";
+}
+.mk-reply:before {
+  content: "\e92c";
+}
+.mk-save:before {
+  content: "\e92d";
+}
+.mk-search:before {
+  content: "\e92e";
+}
+.mk-settings:before {
+  content: "\e92f";
+}
+.mk-share:before {
+  content: "\e930";
+}
+.mk-sign-in:before {
+  content: "\e931";
+}
+.mk-sign-out:before {
+  content: "\e932";
+}
+.mk-smile:before {
+  content: "\e933";
+}
+.mk-sprout:before {
+  content: "\e934";
+}
+.mk-star:before {
+  content: "\e935";
+}
+.mk-sticky-note:before {
+  content: "\e936";
+}
+.mk-sync:before {
+  content: "\e937";
+}
+.mk-trash:before {
+  content: "\e938";
+}
+.mk-tree-broadleaf:before {
+  content: "\e939";
+}
+.mk-tree-needleleaf:before {
+  content: "\e93a";
+}
+.mk-user:before {
+  content: "\e93b";
+}
+.mk-warning-triangle:before {
+  content: "\e93c";
+}

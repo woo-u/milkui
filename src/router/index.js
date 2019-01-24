@@ -37,6 +37,11 @@ export default new Router({
       name: 'typography',
       component: () => AsyncComponent('Typography'),
     },
+    {
+      path: '/Iconography',
+      name: 'iconography',
+      component: () => AsyncComponent('Iconography'),
+    },
     
   ]
 })

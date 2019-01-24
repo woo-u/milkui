@@ -1,3 +1,4 @@
+@import '../plugins/milkui/styles/Variables';
 a {
   text-decoration: none;
 }
@@ -38,4 +39,11 @@ ul, li {
 		font-weight: normal;
 		clear: both;
   }
+}
+
+//highlight
+.hljs {
+	background: $c-light-gray-03;
+	font-family: Menlo,Monaco,Consolas,Courier,monospace;
+	line-height: 1.8;
 }

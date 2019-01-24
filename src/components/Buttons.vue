@@ -11,7 +11,15 @@
         <milk-button @click="handleClick" type="primary">Primary Button</milk-button>
         <milk-button disabled @click="handleClick">Primary Button</milk-button>
       </div>
-      
+      <div class="code-box">
+        <div @click="primaryOpen = !primaryOpen" class="header milk--bg--light-gray-04 milk--border--light-gray-01">
+          <i v-if="!primaryOpen" class="mk-chevron-down" />
+          <i v-if="primaryOpen" class="mk-chevron-up" />
+        </div>
+        <div v-if="primaryOpen" class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
+          <pre v-highlightjs="primaryCode"><code class="html"></code></pre>
+        </div>
+      </div>
     </div>
     <div v-if="nav === 'style'">style
       <milk-button @click="handleClick">Default Button</milk-button>
@@ -22,13 +30,16 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'buttons',
   props: {
     msg: String
   },
   data(){
     return {
-      nav: 'code'
+      nav: 'code',
+      primaryCode: `<milk-button @click="handleClick" type="primary">Primary Button</milk-button>
+<milk-button disabled @click="handleClick">Primary Button</milk-button>`,
+      primaryOpen: false,
     }
   },
   methods: {
@@ -65,6 +76,16 @@ export default {
     text-align: center;
     border-width: 1px;
     border-style: solid;
+  }
+  .code-box {
+    .header { 
+      font-size: 15.4px;
+      height: 58px;
+      padding: 20px;
+      text-align: center;
+      border-top: 0;
+    }
+    .content { border-top: 0; padding: 24px 24px 40px;}
   }
 }
 </style>

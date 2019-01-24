@@ -21,7 +21,7 @@
         <p class="milk-font--title30"><span class="title">Title 30</span> <span class="milk-font--body20">40px</span></p>
         <p class="milk-font--title20"><span class="title">Title 20</span> <span class="milk-font--body20">32px</span></p>
         <p class="milk-font--title10"><span class="title">Title 10</span> <span class="milk-font--body20">24px</span></p>
-        <p class="milk-font--body20"><span class="title">Title 20</span> <span class="milk-font--body20">16px</span></p>
+        <p class="milk-font--body20"><span class="title">Body 20</span> <span class="milk-font--body20">16px</span></p>
         <p class="milk-font--body10"><span class="title">Body 10</span> <span class="milk-font--body20">14px</span></p>
         <p class="milk-font--caption20"><span class="title">Caption 20</span> <span class="milk-font--body20">12px</span></p>
         <p class="milk-font--caption10"><span class="title">Caption 10</span> <span class="milk-font--body20">11px</span></p>
@@ -31,7 +31,7 @@
 </template>
 <script>
 export default {
-  name: '',
+  name: 'typography',
   props: {},
   data(){
     return {}
