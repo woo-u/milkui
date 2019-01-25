@@ -6,21 +6,25 @@
       <div :class="nav === 'style' ? 'active': ''" @click="nav = 'style'">Style</div>
     </nav>
     <div v-if="nav === 'code'">
+      <!--Primary button-->
       <h3 class="milk-font--title10">Primary button</h3>
       <div class="button-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="primary">Primary Button</milk-button>
-        <milk-button disabled @click="handleClick">Primary Button</milk-button>
+        <milk-button type="primary" disabled @click="handleClick">Primary Button</milk-button>
       </div>
-      <div class="code-box">
-        <div @click="primaryOpen = !primaryOpen" class="header milk--bg--light-gray-04 milk--border--light-gray-01">
-          <i v-if="!primaryOpen" class="mk-chevron-down" />
-          <i v-if="primaryOpen" class="mk-chevron-up" />
-        </div>
-        <div v-if="primaryOpen" class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
-          <pre v-highlightjs="primaryCode"><code class="html"></code></pre>
-        </div>
+      <app-code-box :code="primaryCode" />
+
+      <!--Secondary button-->
+      <h3 class="milk-font--title10">Secondary button</h3>
+      <div class="button-box milk--border--light-gray-01">
+        <milk-button @click="handleClick" type="secondary">Secondary button</milk-button>
+        <milk-button disabled @click="handleClick">Secondary button</milk-button>
       </div>
+      <app-code-box :code="secondaryCode" />
     </div>
+    
+    
+
     <div v-if="nav === 'style'">style
       <milk-button @click="handleClick">Default Button</milk-button>
       <milk-button disabled @click="handleClick">Milk Button</milk-button>
@@ -29,17 +33,22 @@
 </template>
 
 <script>
+import CodeBox from './ButtonsCodeBox'
 export default {
   name: 'buttons',
+  components: {
+    AppCodeBox: CodeBox
+  },
   props: {
     msg: String
   },
   data(){
     return {
       nav: 'code',
-      primaryCode: `<milk-button @click="handleClick" type="primary">Primary Button</milk-button>
-<milk-button disabled @click="handleClick">Primary Button</milk-button>`,
-      primaryOpen: false,
+      primaryCode: `<milk-button type="primary">Primary Button</milk-button>
+<milk-button type="primary" disabled>Primary Button</milk-button>`,
+      secondaryCode: `<milk-button type="secondary">Secondary button</milk-button>
+<milk-button type="secondary" disabled>Secondary button</milk-button>`
     }
   },
   methods: {
