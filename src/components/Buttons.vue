@@ -37,6 +37,14 @@
         <milk-button type="secondary" disabled @click="handleClick" size="small">secondary button</milk-button>
       </div>
       <app-code-box :code="secondarySamllCode" />
+
+      <!--Subtle button-->
+      <h3 class="milk-font--title10">Subtle button</h3>
+      <div class="button-box milk--border--light-gray-01">
+        <milk-button @click="handleClick" type="subtle">Subtle</milk-button>
+        <milk-button type="subtle" disabled @click="handleClick">Subtle</milk-button>
+      </div>
+      <app-code-box :code="subtleCode" />
     </div>
     
 
@@ -66,7 +74,10 @@ export default {
 <milk-button type="secondary" disabled>Secondary button</milk-button>`,
       primarySamllCode: `<milk-button type="primary" size="small">primary button</milk-button>
 <milk-button type="primary" size="small" disabled>primary button</milk-button>`,
-      secondarySamllCode: ``
+      secondarySamllCode: `<milk-button type="secondary" size="small">secondary button</milk-button>
+<milk-button type="secondary" disabled size="small">secondary button</milk-button>`,
+      subtleCode:`<milk-button type="subtle">Subtle</milk-button>
+<milk-button type="subtle" disabled>Subtle</milk-button>`
     }
   },
   methods: {
