@@ -109,3 +109,30 @@ $module: 'milk-button';
     opacity: .3;
   }
 }
+
+/**
+* small
+*/
+.#{$module}--small {
+  font-size: 12px;
+  border-width: 1px;
+  .inner {
+    padding: 9px 12px;//12px 16px;
+  }
+}
+
+.#{$module}--small:hover {
+  //padding: 0 0 8px 8px;
+  .inner {
+    padding: 7px 9px 4px 8px;
+    margin: 0 0 6px 6px;
+    border-width: 1px; 
+  }
+  .diagonal { border-width: 1px; width: 11px; }
+}
+
+.#{$module}--small:disabled {
+  .inner {
+    padding: 9px 13px;
+  }
+}

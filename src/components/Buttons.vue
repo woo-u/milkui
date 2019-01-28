@@ -21,8 +21,23 @@
         <milk-button disabled @click="handleClick">Secondary button</milk-button>
       </div>
       <app-code-box :code="secondaryCode" />
+
+      <!--Small primary button-->
+      <h3 class="milk-font--title10">Small primary button</h3>
+      <div class="button-box milk--border--light-gray-01">
+        <milk-button @click="handleClick" type="primary" size="small">primary button</milk-button>
+        <milk-button type="primary" disabled @click="handleClick" size="small">primary button</milk-button>
+      </div>
+      <app-code-box :code="primarySamllCode" />
+      
+      <!--Small secondary button-->
+      <h3 class="milk-font--title10">Small secondary button</h3>
+      <div class="button-box milk--border--light-gray-01">
+        <milk-button @click="handleClick" type="secondary" size="small">secondary button</milk-button>
+        <milk-button type="secondary" disabled @click="handleClick" size="small">secondary button</milk-button>
+      </div>
+      <app-code-box :code="secondarySamllCode" />
     </div>
-    
     
 
     <div v-if="nav === 'style'">style
@@ -48,7 +63,10 @@ export default {
       primaryCode: `<milk-button type="primary">Primary Button</milk-button>
 <milk-button type="primary" disabled>Primary Button</milk-button>`,
       secondaryCode: `<milk-button type="secondary">Secondary button</milk-button>
-<milk-button type="secondary" disabled>Secondary button</milk-button>`
+<milk-button type="secondary" disabled>Secondary button</milk-button>`,
+      primarySamllCode: `<milk-button type="primary" size="small">primary button</milk-button>
+<milk-button type="primary" size="small" disabled>primary button</milk-button>`,
+      secondarySamllCode: ``
     }
   },
   methods: {
