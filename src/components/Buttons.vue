@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import CodeBox from './ButtonsCodeBox'
+import CodeBox from './CodeBox'
 export default {
   name: 'buttons',
   components: {
@@ -91,22 +91,6 @@ export default {
 <style lang='scss'>
 @import '../plugins/milkui/styles/Variables';
 #content.milk-buttons{
-  h2 {
-    margin-bottom: 33px;
-  }
-
-  nav {
-    margin-bottom: 50px;
-    div {
-      display: inline-block;
-      margin-right: 43px;
-      cursor: pointer;
-    }
-    .active {
-      color: $c-primary;
-      border-bottom: 1px solid $c-primary;
-    }
-  }
 
   .button-box {
     padding-top: 85px;
@@ -115,15 +99,6 @@ export default {
     border-width: 1px;
     border-style: solid;
   }
-  .code-box {
-    .header { 
-      font-size: 15.4px;
-      height: 58px;
-      padding: 20px;
-      text-align: center;
-      border-top: 0;
-    }
-    .content { border-top: 0; padding: 24px 24px 40px;}
-  }
+  
 }
 </style>

@@ -33,14 +33,19 @@ export default new Router({
       component: () => AsyncComponent('Buttons'),
     },
     {
-      path: '/Typography',
+      path: '/typography',
       name: 'typography',
       component: () => AsyncComponent('Typography'),
     },
     {
-      path: '/Iconography',
+      path: '/iconography',
       name: 'iconography',
       component: () => AsyncComponent('Iconography'),
+    },
+    {
+      path: '/checkboxes',
+      name: 'checkboxes',
+      component: () => AsyncComponent('CheckBoxes'),
     },
     
   ]

@@ -38,6 +38,21 @@ ul, li {
 		margin-bottom: 32px;
 		font-weight: normal;
 		clear: both;
+	}
+	nav {
+		margin-bottom: 50px;
+		margin-top: -30px;
+    div {
+      display: inline-block;
+			margin-right: 43px;
+			color: $c-dark-gray;
+      cursor: pointer;
+    }
+    .active {
+      color: $c-primary;
+			border-bottom: 1px solid $c-primary;
+			padding-bottom: 8px;
+    }
   }
 }
 

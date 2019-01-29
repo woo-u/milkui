@@ -52,7 +52,7 @@ export default {
         {label: 'Buttons', route: 'buttons'},
         {label: 'Notification', route: 'notification'},
         {label: 'Modals', route: 'modals'},
-        {label: 'Checkbox', route: 'checkbox'},
+        {label: 'Checkboxes', route: 'checkboxes'},
         {label: 'Radio Button', route: 'radiobutton'},
         {label: 'Confirm', route: 'confirm'},
         //{label: 'Select', route: 'select'},
