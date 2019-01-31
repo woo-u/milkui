@@ -20,13 +20,12 @@ export default {
   data(){
     return {
       primaryColors: [
-				{ 'name': 'Milk Blue', 'color':'primary', 'hex': '#126AFB', 'usage': 'Primary buttons, links, active', 'textColor': 'white'},
+				{ 'name': 'Milk Chocolate', 'color':'primary', 'hex': '#126AFB', 'usage': 'Primary buttons, links, active', 'textColor': 'white'},
       ],
       secondaryColors: [
-        { 'name': 'Green', 'color': 'green', 'hex': '#16AA52', 'usage': 'Success', 'textColor': 'white'},
-        { 'name': 'Red', 'color': 'red', 'hex': '#EF4B3F', 'usage': 'Error', 'textColor': 'white'},
-        { 'name': 'Yellow', 'color': 'yellow', 'hex': '#FFAC00', 'usage': 'Warning', 'textColor': 'white'},
-        { 'name': 'Purple', 'color': 'purple', 'hex': '#6652A0', 'usage': 'Information', 'textColor': 'white'},
+        { 'name': 'Milk Melon', 'color': 'melon', 'hex': '#25CEA5', 'usage': 'Success', 'textColor': 'white'},
+        { 'name': 'Milk Strawberry', 'color': 'strawberry', 'hex': '#F96580', 'usage': 'Error', 'textColor': 'white'},
+        { 'name': 'Milk Banana', 'color': 'banana', 'hex': '#FCDC6B', 'usage': 'Warning', 'textColor': 'dark-gray'},
       ],
       neutralColors: [
         { 'name': 'Black', 'color': 'black', 'hex': '#303133', 'usage': 'Text', 'textColor': 'white'},

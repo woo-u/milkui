@@ -34,9 +34,9 @@ export default {
     width: 150px;
     height: 150px;
     border-radius: 8px;
-    padding: 24px;
+    padding: 14px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
   }
   &__name {
     font-weight: bold;

@@ -5,10 +5,9 @@ $module: 'milk';
 body .#{$module} {
 	&--primary { color: $c-primary; }
   
-  &--green { color: $c-green; }
-  &--red { color: $c-red; }
-  &--yellow { color: $c-yellow; }
-  &--purple { color: $c-purple; }
+  &--melon { color: $c-melon; }
+  &--strawberry { color: $c-strawberry; }
+  &--banana { color: $c-banana; }
 
   &--black { color: $c-black; }
   &--dark-gray { color: $c-dark-gray; } 
@@ -24,10 +23,9 @@ body .#{$module} {
 body .#{$module}--bg {
 	&--primary { background-color: $c-primary; }
   
-  &--green { background-color: $c-green; }
-  &--red { background-color: $c-red; }
-  &--yellow { background-color: $c-yellow; }
-  &--purple { background-color: $c-purple; }
+  &--melon { background-color: $c-melon; }
+  &--strawberry { background-color: $c-strawberry; }
+  &--banana { background-color: $c-banana; }
   
   &--black { background-color: $c-black; }
   &--dark-gray { background-color: $c-dark-gray; } 
@@ -43,10 +41,9 @@ body .#{$module}--border {
   
 	&--primary { border-color: $c-primary; border-width: 1px; border-style: solid; }
   
-  &--green { border-color: $c-green; border-width: 1px; border-style: solid; }
-  &--red { border-color: $c-red; border-width: 1px; border-style: solid; }
-  &--yellow { border-color: $c-yellow; border-width: 1px; border-style: solid; }
-  &--purple { border-color: $c-purple; border-width: 1px; border-style: solid; }
+  &--melon { border-color: $c-melon; border-width: 1px; border-style: solid; }
+  &--strawberry { border-color: $c-strawberry; border-width: 1px; border-style: solid; }
+  &--banana { border-color: $c-banana; border-width: 1px; border-style: solid; }
   
   &--black { border-color: $c-black; border-width: 1px; border-style: solid; }
   &--dark-gray { border-color: $c-dark-gray; border-width: 1px; border-style: solid; } 

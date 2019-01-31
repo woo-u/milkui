@@ -114,6 +114,8 @@ ul {
   transition: height 600ms ease-out;
   .router-link-active {
     color: $c-primary;
+    font-weight: bold;
+    border-left: 4px solid $c-primary;
   }
 }
 ul.off {
@@ -125,7 +127,7 @@ li a {
   padding: 16px 44px;
   display: block;
   &:hover {
-    background-color: #DCDFE6;
+    background-color: #f5f3f1;
   }
 }
 </style>
