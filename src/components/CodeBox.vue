@@ -33,6 +33,7 @@ export default {
     padding: 20px;
     text-align: center;
     border-top: 0;
+    cursor: pointer;
   }
   .content { border-top: 0; padding: 24px 24px 40px;}
 }

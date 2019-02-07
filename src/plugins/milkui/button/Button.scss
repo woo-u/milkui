@@ -38,7 +38,8 @@ $module: 'milk-button';
   }
 }
 
-.#{$module}:hover {
+.#{$module}:hover,
+.#{$module}:active {
   //padding: 0 0 8px 8px;
   .inner {
     border-left: 2px solid $c-primary;
@@ -49,14 +50,14 @@ $module: 'milk-button';
   .diagonal { width: 13px; }
 }
 
-.#{$module}:active {
-  border-color: #0f5bd8;
-  background-color: #0f5bd8;
+.#{$module}:focus {
+  border-color: #fff;
+  background-color: $c-primary;
   .inner {
     padding: 12px 16px;
     margin: 0;
     border: 0;
-    background-color: #0f5bd8;
+    background-color: $c-primary;
     color: #fff;
   }
   .diagonal { width: 0; }
@@ -123,7 +124,8 @@ $module: 'milk-button';
   color: $c-dark-gray;
   border: 0;
 }
-.#{$module}--subtle:hover {
+.#{$module}--subtle:hover,
+.#{$module}--subtle:active {
   color: $c-primary;
   .inner { 
     border: 0;
@@ -132,12 +134,12 @@ $module: 'milk-button';
   }
   .diagonal { width: 0; }
 }
-.#{$module}--subtle:active {
+.#{$module}--subtle:focus {
   .inner { 
     padding: 12px 16px;
     margin: 0; 
     background-color: #fff;
-    color: #0f5bd8;
+    color: $c-primary;
   }
 }
 
@@ -153,7 +155,8 @@ $module: 'milk-button';
   }
 }
 
-.#{$module}--small:hover {
+.#{$module}--small:hover,
+.#{$module}--small:active {
   //padding: 0 0 8px 8px;
   .inner {
     padding: 7px 9px 4px 8px;
@@ -162,7 +165,7 @@ $module: 'milk-button';
   }
   .diagonal { border-width: 1px; width: 11px; }
 }
-.#{$module}--small:active {
+.#{$module}--small:focus {
   border-color: #fff;
   .inner { padding: 9px 12px; margin: 0; }
   .diagonal { width: 0; }

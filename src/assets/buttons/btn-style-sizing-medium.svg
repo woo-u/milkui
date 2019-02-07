@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="338" viewBox="0 0 500 338">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFBFC" d="M0 0h500v338H0z"/>
+        <path stroke="#87634D" stroke-width="2" d="M163 245h170v-46H163v46z"/>
+        <text fill="#87634D" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(162 198)">
+            <tspan x="16.257" y="29">Secondary Bu</tspan> <tspan x="122.721" y="29" letter-spacing="-.033">tt</tspan> <tspan x="135.647" y="29">on</tspan>
+        </text>
+        <path fill="#87634D" d="M172 140h153V92H172z"/>
+        <text fill="#FFF" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(172 92)">
+            <tspan x="16.397" y="29">Primary Bu</tspan> <tspan x="103.581" y="29" letter-spacing="-.033">tt</tspan> <tspan x="116.507" y="29">on</tspan>
+        </text>
+        <g>
+            <g stroke="#25CEA5" stroke-linecap="square">
+                <path d="M164 103.75h160.5M164 91.75h160.5M164 103.123V92"/>
+            </g>
+            <g stroke="#25CEA5" stroke-linecap="square">
+                <path d="M164 140h160.5M164 128h160.5M164 139v-10"/>
+            </g>
+            <g stroke="#25CEA5" stroke-linecap="square">
+                <path d="M172.5 83v57M188.5 83v57M173 83h15"/>
+            </g>
+            <g stroke="#25CEA5" stroke-linecap="square">
+                <path d="M307.5 83v57M323.5 83v57M308 83h15"/>
+            </g>
+            <g stroke="#F96580" stroke-linecap="square">
+                <path d="M338 92v48M329.5 92h8M329.5 140h8"/>
+            </g>
+            <text fill="#F96580" font-family="NotoSans-Regular, Noto Sans" font-size="12" transform="translate(127 62)">
+                <tspan x="219" y="61">48px</tspan>
+            </text>
+            <text fill="#25CEA5" font-family="NotoSans-Regular, Noto Sans" font-size="12" transform="translate(127 62)">
+                <tspan x="39" y="13">16px</tspan>
+            </text>
+            <text fill="#25CEA5" font-family="NotoSans-Regular, Noto Sans" font-size="12" transform="translate(127 62)">
+                <tspan x="175" y="13">16px</tspan>
+            </text>
+            <text fill="#25CEA5" font-family="NotoSans-Regular, Noto Sans" font-size="12" transform="translate(127 62)">
+                <tspan x="0" y="43">12px</tspan>
+            </text>
+            <text fill="#25CEA5" font-family="NotoSans-Regular, Noto Sans" font-size="12" transform="translate(127 62)">
+                <tspan x="0" y="79">12px</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

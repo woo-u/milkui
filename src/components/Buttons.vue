@@ -48,9 +48,112 @@
     </div>
     
 
-    <div v-if="nav === 'style'">style
-      <milk-button @click="handleClick">Default Button</milk-button>
-      <milk-button disabled @click="handleClick">Milk Button</milk-button>
+    <div v-if="nav === 'style'" class="nav-style">
+      <h3 class="milk-font--title10">Colors</h3>
+      <div>
+        <img :src="stylePrimary" />
+        <div class="style-box">
+          <ul>
+            <li><strong>Default</strong></li>
+            <li>Box-fill: #87634D</li>
+            <li>Text color: #FFFFFF</li>
+          </ul>
+          <ul>
+            <li><strong>Hover</strong></li>
+            <li>Box-fill: #8F6D59</li>
+            <li>Box-border: #FFFFFF</li>
+            <li>Text color: #FFFFFF</li>
+          </ul>
+          <ul>
+            <li><strong>Active</strong></li>
+            <li>Box-fill: #76543E</li>
+            <li>Text color: #FFFFFF</li>
+          </ul>
+          <ul>
+            <li><strong>Disabled</strong></li>
+            <li>Box-fill: #EBECF0</li>
+            <li>Text color: #606266 opacity 30%</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img :src="styleSecondary" />
+        <div class="style-box">
+          <ul>
+            <li>Default</li>
+            <li>Box-border: #87634D</li>
+            <li>Text color: #126AFB</li>
+          </ul>
+          <ul>
+            <li>Hover</li>
+            <li>Box-border: #87634D</li>
+            <li>Text color: #126AFB</li>
+          </ul>
+          <ul>
+            <li>Active</li>
+            <li>Box-fill: #87634D</li>
+            <li>Text color: #FFFFFF</li>
+          </ul>
+          <ul>
+            <li>Disabled</li>
+            <li>Box-border: #606266 opacity 30%</li>
+            <li>Text color: #606266 opacity 30%</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img :src="styleSubtle" />
+        <div class="style-box">
+          <ul>
+            <li>Default</li>
+            <li>Text color: #606266</li>
+          </ul>
+          <ul>
+            <li>Hover</li>
+            <li>Text color: #87634D</li>
+          </ul>
+          <ul>
+            <li>Active</li>
+            <li>Text color: #76543E</li>
+          </ul>
+          <ul>
+            <li>Disabled</li>
+            <li>Text color: #606266 opacity 30%</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="milk-font--title10 title-sizing">Sizing</h3>
+      <div>
+        <img :src="styleMedium" />
+        <div class="style-box">
+          <ul>
+            <li><strong>Medium size</strong></li>
+            <li>Height: 48px</li>
+            <li>Horizontal padding: 16px</li>
+            <li>Vertical padding: 12px</li>
+            <li>Minimum width: 100px</li>
+            <li>Font size: 16px</li>
+            <li>Line height: 24px </li>
+            <li>border: 2px</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img :src="styleSmall" />
+        <div class="style-box">
+          <ul>
+            <li><strong>Small size</strong></li>
+            <li>Height: 38px</li>
+            <li>Horizontal padding: 12px</li>
+            <li>Vertical padding: 9px</li>
+            <li>Minimum width: 60px</li>
+            <li>Font size: 12px</li>
+            <li>Line height: 20px </li>
+            <li>border: 1px</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -77,7 +180,12 @@ export default {
       secondarySamllCode: `<milk-button type="secondary" size="small">secondary button</milk-button>
 <milk-button type="secondary" disabled size="small">secondary button</milk-button>`,
       subtleCode:`<milk-button type="subtle">Subtle</milk-button>
-<milk-button type="subtle" disabled>Subtle</milk-button>`
+<milk-button type="subtle" disabled>Subtle</milk-button>`,
+      stylePrimary: require('../assets/buttons/btn-style-color-primary.svg'),
+      styleSecondary: require('../assets/buttons/btn-style-color-secondary.svg'),
+      styleSubtle: require('../assets/buttons/btn-style-color-subtle.svg'),
+      styleMedium: require('../assets/buttons/btn-style-sizing-medium.svg'),
+      styleSmall: require('../assets/buttons/btn-style-sizing-small.svg'),
     }
   },
   methods: {
@@ -91,7 +199,6 @@ export default {
 <style lang='scss'>
 @import '../plugins/milkui/styles/Variables';
 #content.milk-buttons{
-
   .button-box {
     padding-top: 85px;
     padding-bottom: 85px;
@@ -99,6 +206,24 @@ export default {
     border-width: 1px;
     border-style: solid;
   }
-  
+  .nav-style {
+    &>div {
+      clear: both;
+      overflow: hidden;
+    }
+    img {
+      float: left;
+      margin-bottom: 32px;
+    }
+    .style-box {
+      overflow: hidden;
+      padding-left: 24px;
+      padding-top: 15px;
+      color: $c-dark-gray;
+      font-size: 14px;
+      line-height: 1.57;
+      ul { margin-top: 0; }
+    }
+  }
 }
 </style>

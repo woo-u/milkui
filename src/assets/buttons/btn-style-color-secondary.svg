@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="586" viewBox="0 0 500 586">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFBFC" d="M0 0h500v586H0z"/>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14">
+            <tspan x="16" y="31">Default / Hover / Active / Disabled</tspan>
+        </text>
+        <path stroke="#87634D" stroke-width="2" d="M165 148h170v-46H165v46z"/>
+        <text fill="#87634D" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(164 101)">
+            <tspan x="16.257" y="29">Secondary Bu</tspan> <tspan x="122.721" y="29" letter-spacing="-.033">tt</tspan> <tspan x="135.647" y="29">on</tspan>
+        </text>
+        <path stroke="#87634D" stroke-width="2" d="M165 260h170v-46H165v46z"/>
+        <g fill-rule="nonzero" stroke="#87634D" stroke-linecap="square" stroke-width="2">
+            <path d="M172 214v39M172.003 253l-5.951 6M334.499 253H172"/>
+        </g>
+        <text fill="#87634D" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(164 213)">
+            <tspan x="20.257" y="25">Secondary Bu</tspan> <tspan x="126.721" y="25" letter-spacing="-.033">tt</tspan> <tspan x="139.647" y="25">on</tspan>
+        </text>
+        <g>
+            <path fill="#87634D" d="M164 373h172v-48H164z"/>
+            <text fill="#FFF" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(164 325)">
+                <tspan x="16.257" y="29">Secondary Bu</tspan> <tspan x="122.721" y="29" letter-spacing="-.033">tt</tspan> <tspan x="135.647" y="29">on</tspan>
+            </text>
+        </g>
+        <g opacity=".3">
+            <path stroke="#606266" stroke-width="2" d="M165 484h170v-46H165v46z"/>
+            <text fill="#606266" font-family="NotoSans-SemiBold, Noto Sans" font-size="16" font-weight="500" transform="translate(164 437)">
+                <tspan x="16.257" y="29">Secondary Bu</tspan> <tspan x="122.721" y="29" letter-spacing="-.033">tt</tspan> <tspan x="135.647" y="29">on</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
