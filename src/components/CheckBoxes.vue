@@ -14,6 +14,28 @@
         <milk-checkbox id="item-1" label="Unchecked Item" v-model="checked2"  />
       </div>
       <app-code-box :code="basicCode" />
+
+      <!--Group-->
+      <h3 class="milk-font--title10">Group</h3>
+      <div class="checkbox-box milk--border--light-gray-01">
+        <milk-checkbox-group v-model="checkGroups"  />
+      </div>
+      <app-code-box :code="groupCode" />
+
+      <!--Indeterminate-->
+      <h3 class="milk-font--title10">Indeterminate</h3>
+      <div class="checkbox-box milk--border--light-gray-01">
+        <milk-checkbox-group v-model="checkGroups2" indeterminate />
+      </div>
+      <app-code-box :code="indeterminateCode" />
+
+      <!--Disabled-->
+      <h3 class="milk-font--title10">Disabled</h3>
+      <div class="checkbox-box milk--border--light-gray-01">
+        <milk-checkbox id="item-diabled-0" label="Checked Item" v-model="checkedDisable1" disabled />
+        <milk-checkbox id="item-diabled-1" label="Unchecked Item" v-model="checkedDisable2" disabled />
+      </div>
+      <app-code-box :code="disabledCode" />
     </div>
   </div>
 </template>
@@ -26,10 +48,23 @@ export default {
   },
   props: {},
   data(){
+    /* eslint-disable */
     return {
       nav: 'code',
       checked1: true,
       checked2: false,
+      checkedDisable1: true,
+      checkedDisable2: false,
+      checkGroups: [
+        { value: true, id: 'group1-A', label:"Option A" }, 
+        { value: false, id: 'group1-B', label:"Option B" }, 
+        { value: false, id: 'group1-C', label:"Option C" }, 
+      ],
+      checkGroups2: [
+        { value: true, id: 'group2-A', label:"Option A" }, 
+        { value: false, id: 'group2-B', label:"Option B" }, 
+        { value: false, id: 'group2-C', label:"Option C" }, 
+      ],
       basicCode: `<template>
   <div>
     <milk-checkbox id="item-0" label="Checked Item" v-model="checked1"  />
@@ -46,6 +81,58 @@ export default {
     }
   };
 <\/script>`,
+      groupCode: `<template>
+  <div>
+    <milk-checkbox-group v-model="checkGroups" />
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        checkGroups: [
+          { value: true, id: 'group1-A', label:"Option A" }, 
+          { value: false, id: 'group1-B', label:"Option B" }, 
+          { value: false, id: 'group1-C', label:"Option C" }, 
+        ],
+      };
+    }
+  };
+<\/script>`,
+      indeterminateCode: `<template>
+  <div>
+    <milk-checkbox-group v-model="checkGroups2" indeterminate />
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        checkGroups2: [
+          { value: true, id: 'group2-A', label:"Option A" }, 
+          { value: false, id: 'group2-B', label:"Option B" }, 
+          { value: false, id: 'group2-C', label:"Option C" }, 
+        ],
+      };
+    }
+  };
+<\/script>`,
+      disabledCode: `<template>
+  <div>
+    <milk-checkbox id="item-diabled-0" label="Checked Item" v-model="checkedDisable1" disabled />
+    <milk-checkbox id="item-diabled-1" label="Unchecked Item" v-model="checkedDisable2" disabled />
+  </div>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        checkedDisable1: true,
+        checkedDisable2: false,
+      };
+    }
+  };
+<\/script>`
     }
   }
 }

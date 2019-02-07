@@ -55,12 +55,14 @@ $module: 'milk-checkbox';
 		-ms-transform: rotate(45deg) scaleY(0);
 		transform: rotate(45deg) scaleY(0);
 		width: 4.5px;
-		transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
 		-ms-transform-origin: center;
 		transform-origin: center;
 	}
 	input[type="checkbox"]:checked + span.line::after {
 		transform: rotate(45deg) scaleY(1);
+	}
+	input[type="checkbox"]:disabled + span.line::after {
+		border-color: $c-gray;
 	}
 
 	//input
@@ -81,11 +83,11 @@ $module: 'milk-checkbox';
 	input[type="checkbox"] + span.line::after {
 		box-sizing: content-box;
 		content: "";
-		border: 1.5px solid #fff;
+		border: 1px solid #fff;
 		border-left: 0;
 		border-top: 0;
 		border-right: 0;
-		height: 6.5px;
+		height: 7px;
 		left: 2px;
 		position: absolute;
 		top: 1px;

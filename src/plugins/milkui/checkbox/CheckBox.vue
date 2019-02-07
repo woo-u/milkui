@@ -37,7 +37,7 @@ export default {
     type: {
       type: String,
       default: 'normal'
-    }
+    },
   },
   components: {
 
