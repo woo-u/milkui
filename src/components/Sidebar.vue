@@ -53,7 +53,7 @@ export default {
         {label: 'Notification', route: 'notification'},
         {label: 'Modals', route: 'modals'},
         {label: 'Checkboxes', route: 'checkboxes'},
-        {label: 'Radio Button', route: 'radiobutton'},
+        {label: 'Radios', route: 'radios'},
         {label: 'Confirm', route: 'confirm'},
         //{label: 'Select', route: 'select'},
         {label: 'Text Input', route: 'input'},

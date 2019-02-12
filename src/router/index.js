@@ -47,6 +47,11 @@ export default new Router({
       name: 'checkboxes',
       component: () => AsyncComponent('CheckBoxes'),
     },
+    {
+      path: '/radios',
+      name: 'radios',
+      component: () => AsyncComponent('Radios'),
+    },
     
   ]
 })

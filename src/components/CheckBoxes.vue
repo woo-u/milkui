@@ -36,7 +36,62 @@
         <milk-checkbox id="item-diabled-1" label="Unchecked Item" v-model="checkedDisable2" disabled />
       </div>
       <app-code-box :code="disabledCode" />
-    </div>
+    </div><!--End Code-->
+
+    <div v-if="nav === 'style'" class="nav-style">
+      <h3 class="milk-font--title10">Colors</h3>
+      <div>
+        <img :src="imgColor" />
+        <div class="style-box">
+          <ul>
+            <li><strong>Checked</strong></li>
+            <li>Box-fill: #87634D</li>
+            <li>Icon color: #FFFFFF</li>
+            <li>Text color: #606266</li>
+          </ul>
+          <ul>
+            <li><strong>Hover</strong></li>
+            <li>Box-border: #87634D</li>
+            <li>Text color: #606266</li>
+          </ul>
+          <ul>
+            <li><strong>Unchecked</strong></li>
+            <li>Box-border: #DCDFE6</li>
+            <li>Text color: #606266</li>
+          </ul>
+          <ul>
+            <li><strong>Unchecked disable</strong></li>
+            <li>Box-fill: #EBECF0</li>
+            <li>Box-border: #DCDFE6</li>
+            <li>Text color: #909399</li>
+          </ul>
+          <ul>
+            <li>Checked disable</li>
+            <li>Box-fill: #EBECF0</li>
+            <li>Box-border: #DCDFE6</li>
+            <li>Icon color: #909399</li>
+            <li>Text color: #909399</li>
+          </ul>
+        </div><!--End style-box-->
+      </div>
+      <h3 class="milk-font--title10">Sizing</h3>
+      <div>
+        <img :src="imgSizing" />
+        <div class="style-box">
+          <ul>
+            <li><strong>Checkbox size</strong></li>
+            <li>Width: 18px</li>
+            <li>Height: 18px</li>
+            <li>Border: 1px</li>
+          </ul>
+          <ul>
+            <li>Font size: 14px</li>
+            <li>Horizontal padding: 8px</li>
+            <li>Vertical padding: 16px</li>
+          </ul>
+        </div>
+      </div>
+    </div><!--End Style-->
   </div>
 </template>
 <script>
@@ -65,6 +120,8 @@ export default {
         { value: false, id: 'group2-B', label:"Option B" }, 
         { value: false, id: 'group2-C', label:"Option C" }, 
       ],
+      imgColor: require('../assets/checkboxes/img-checkboxes-color.svg'),
+      imgSizing: require('../assets/checkboxes/img-checkboxes-sizing.svg'),
       basicCode: `<template>
   <div>
     <milk-checkbox id="item-0" label="Checked Item" v-model="checked1"  />

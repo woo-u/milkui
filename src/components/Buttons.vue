@@ -206,24 +206,6 @@ export default {
     border-width: 1px;
     border-style: solid;
   }
-  .nav-style {
-    &>div {
-      clear: both;
-      overflow: hidden;
-    }
-    img {
-      float: left;
-      margin-bottom: 32px;
-    }
-    .style-box {
-      overflow: hidden;
-      padding-left: 24px;
-      padding-top: 15px;
-      color: $c-dark-gray;
-      font-size: 14px;
-      line-height: 1.57;
-      ul { margin-top: 0; }
-    }
-  }
+  
 }
 </style>
