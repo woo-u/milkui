@@ -1,0 +1,17 @@
+@import "../styles/Variables";
+
+$module: 'milk-breadcrumb';
+
+.#{$module} {
+	font-size: 14px;
+	color: $c-dark-gray;
+	display: inline-block;
+	line-height: 24px;
+
+	i {
+		width: 24px;
+    display: inline-block;
+		text-align: center;
+		margin: 0 4px;
+	}
+}

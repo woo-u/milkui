@@ -52,6 +52,11 @@ export default new Router({
       name: 'radios',
       component: () => AsyncComponent('Radios'),
     },
+    {
+      path: '/breadcrumbs',
+      name: 'breadcrumbs',
+      component: () => AsyncComponent('Breadcrumbs'),
+    },
     
   ]
 })

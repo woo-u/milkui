@@ -54,6 +54,7 @@ export default {
         {label: 'Modals', route: 'modals'},
         {label: 'Checkboxes', route: 'checkboxes'},
         {label: 'Radios', route: 'radios'},
+        {label: 'Breadcrumbs', route: 'breadcrumbs'},
         {label: 'Confirm', route: 'confirm'},
         //{label: 'Select', route: 'select'},
         {label: 'Text Input', route: 'input'},
@@ -116,6 +117,7 @@ ul {
     color: $c-primary;
     font-weight: bold;
     border-left: 4px solid $c-primary;
+    padding-left: 40px;
   }
 }
 ul.off {

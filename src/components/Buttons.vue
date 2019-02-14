@@ -8,7 +8,7 @@
     <div v-if="nav === 'code'">
       <!--Primary button-->
       <h3 class="milk-font--title10">Primary button</h3>
-      <div class="button-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="primary">Primary Button</milk-button>
         <milk-button type="primary" disabled @click="handleClick">Primary Button</milk-button>
       </div>
@@ -16,7 +16,7 @@
 
       <!--Secondary button-->
       <h3 class="milk-font--title10">Secondary button</h3>
-      <div class="button-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="secondary">Secondary button</milk-button>
         <milk-button disabled @click="handleClick">Secondary button</milk-button>
       </div>
@@ -24,7 +24,7 @@
 
       <!--Small primary button-->
       <h3 class="milk-font--title10">Small primary button</h3>
-      <div class="button-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="primary" size="small">primary button</milk-button>
         <milk-button type="primary" disabled @click="handleClick" size="small">primary button</milk-button>
       </div>
@@ -32,7 +32,7 @@
       
       <!--Small secondary button-->
       <h3 class="milk-font--title10">Small secondary button</h3>
-      <div class="button-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="secondary" size="small">secondary button</milk-button>
         <milk-button type="secondary" disabled @click="handleClick" size="small">secondary button</milk-button>
       </div>
@@ -40,7 +40,7 @@
 
       <!--Subtle button-->
       <h3 class="milk-font--title10">Subtle button</h3>
-      <div class="button-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="subtle">Subtle</milk-button>
         <milk-button type="subtle" disabled @click="handleClick">Subtle</milk-button>
       </div>
@@ -199,13 +199,6 @@ export default {
 <style lang='scss'>
 @import '../plugins/milkui/styles/Variables';
 #content.milk-buttons{
-  .button-box {
-    padding-top: 85px;
-    padding-bottom: 85px;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-  }
   
 }
 </style>

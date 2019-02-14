@@ -9,13 +9,13 @@
     <div v-if="nav === 'code'">
       <!--Basic-->
       <h3 class="milk-font--title10">Basic</h3>
-      <div class="radio-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-radio type="group" v-for="item in items" :key="item.id" :id="item.id" :name="item.name" :label="item.item" :checked="item.checked"  />
       </div>
       <app-code-box :code="basicCode" />
       <!--Disabled-->
       <h3 class="milk-font--title10">Disabled</h3>
-      <div class="radio-box milk--border--light-gray-01">
+      <div class="ui-box milk--border--light-gray-01">
         <milk-radio type="group" v-for="item in disabledItems" :key="item.id" :id="item.id" :name="item.name" :label="item.item" :checked="item.checked" disabled />
       </div>
       <app-code-box :code="disabledCode" />
@@ -142,14 +142,6 @@ export default {
 </script>
 <style lang='scss'>
 #content.milk-radios{
-
-  .radio-box {
-    padding-top: 85px;
-    padding-bottom: 85px;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-  }
 
 }
 </style>

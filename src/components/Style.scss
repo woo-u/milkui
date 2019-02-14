@@ -81,3 +81,12 @@ ul, li {
 	font-family: Menlo,Monaco,Consolas,Courier,monospace;
 	line-height: 1.8;
 }
+
+//ui box
+#content .ui-box {
+	padding-top: 85px;
+	padding-bottom: 85px;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+}
