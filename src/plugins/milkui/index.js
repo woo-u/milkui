@@ -4,6 +4,8 @@ import MilkCheckBox from './checkbox/CheckBox.vue'
 import MilkCheckBoxGroup from './checkbox-group/CheckBoxGroup.vue'
 import MilkRadio from './radio/Radio.vue'
 import MilkBreadcrumb from './breadcrumb/Breadcrumb.vue'
+import MilkSelect from './select/MilkSelect.vue'
+import Input from './input/Input.vue'
 
 const components = [
   MilkButton,
@@ -11,6 +13,8 @@ const components = [
   MilkCheckBoxGroup,
   MilkRadio,
   MilkBreadcrumb,
+  MilkSelect,
+  Input
 ]
 
 const MilkUI = {

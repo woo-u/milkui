@@ -1,0 +1,45 @@
+@import "../styles/Variables";
+
+$module: 'milk-select';
+
+.#{$module} {
+  position: relative;
+  select {
+    padding: 7px 8px 7px 16px;
+    line-height: 22px;
+  }
+  .milk-input input {
+    background-color: $c-white;
+    cursor: pointer;
+    border: 1px solid $c-white;
+    border-bottom: 1px solid $c-light-gray-01;
+    padding: 8px 16px;
+    color: $c-black;
+  }
+  .milk-input input:hover {
+    border-color: $c-light-gray-03;
+    background-color: $c-light-gray-03;
+  }
+  .milk-input__icon {
+    transition:transform .7s;
+    color: $c-dark-gray;
+  }
+
+}
+
+.#{$module}--open {
+  .#{$module}__options {
+    visibility: visible;
+    opacity: 1;
+  }
+  .milk-input input {
+    border: 1px solid $c-primary;
+  }
+  .milk-input input:hover {
+    border: 1px solid $c-primary;
+    background-color: $c-white;
+  }
+  .milk-input__icon {
+    transform: rotate(180deg);
+  }
+}

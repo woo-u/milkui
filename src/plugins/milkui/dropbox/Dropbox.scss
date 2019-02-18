@@ -1,0 +1,34 @@
+@import "../styles/Variables";
+
+$module: 'milk-dropbox';
+
+.#{$module} {
+  position: absolute;
+  background-color: #ffffff;
+  margin-top: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition:visibility 0.5s, opacity 0.2s linear;
+  transform: rotate(0);
+  &__options {
+    list-style: none;
+    margin: 0;
+    max-height: 250px;
+    overflow: scroll;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: $c-white;
+    
+    li {
+      padding: 9px 8px 9px 16px;
+      line-height: 1.57;
+      cursor: pointer;
+      &:hover { background-color: $c-light-gray-03; }
+      &.selected { color: $c-primary; font-weight: 600;}
+    }
+  }
+}
+
+.#{$module}--open {
+  visibility: visible;
+  opacity: 1;
+}

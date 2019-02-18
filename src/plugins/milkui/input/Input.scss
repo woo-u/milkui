@@ -1,0 +1,79 @@
+@import "../styles/Variables";
+
+$module: 'milk-input';
+
+.#{$module} {
+  position: relative;
+  input, textarea {
+    padding: 7px 16px;
+    margin: 4px 0;
+    line-height: 22px;
+    border: 1px solid $c-light-gray-01;
+    border-radius: 2px;
+    &:hover {
+      border-color: $c-dark-gray;
+    }
+    &:focus {
+      outline: none;
+      border-color:#097db7;
+    }
+    &:disabled {
+      background-color: $c-light-gray-01;
+      color: $c-dark-gray;
+    }
+  }
+  textarea {
+
+  }
+  ::placeholder {
+    color: $c-gray;
+  }
+  &__label {
+    font-weight: bold;
+    line-height: 1.67;
+    display: block;
+  }
+  &__caption {
+    line-height: 1.27;
+    display: block;
+  }
+  &__invalid-msg {
+    display: block;
+    padding: 7.5px 10px;
+    line-height: 1.73;
+    border-radius: 2px;
+  }
+  &__clearble {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+  }
+  &__icon {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.#{$module}--invalid {
+  input{
+    border-color: $c-strawberry;
+    &:hover {
+      border-color: $c-strawberry;
+    }
+    &:focus {
+      outline: none;
+      border-color: $c-strawberry;
+    }
+  }
+}
+
+.#{$module}--disabled {
+  ::placeholder {
+    color: $c-dark-gray;
+    opacity: 0.3;
+  }
+}
