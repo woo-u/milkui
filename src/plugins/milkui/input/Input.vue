@@ -37,7 +37,7 @@
       <i 
         v-if="clearble && selfModel.length > 0" 
         @click="handleClickClear" 
-        :class="`mk-closed`"
+        :class="`milk-input__icon mk-closed`"
         :style="clearbleStyle" />
       <i 
         v-if="icon" 
@@ -135,6 +135,7 @@ export default {
   },
   methods: {
     handleClickClear(evt){
+      if (evt) evt.preventDefault()
       this.selfModel = ''
       this.$emit('change', '', evt)
     },

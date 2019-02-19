@@ -18,8 +18,9 @@ $module: 'milk-input';
       border-color:#097db7;
     }
     &:disabled {
-      background-color: $c-light-gray-01;
-      color: $c-dark-gray;
+      background-color: $c-light-gray-04;
+      color: $c-light-gray-04;
+      cursor: not-allowed;
     }
   }
   textarea {

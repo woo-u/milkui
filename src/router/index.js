@@ -58,9 +58,9 @@ export default new Router({
       component: () => AsyncComponent('Breadcrumbs'),
     },
     {
-      path: '/selects',
-      name: 'selects',
-      component: () => AsyncComponent('Selects'),
+      path: '/select',
+      name: 'select',
+      component: () => AsyncComponent('Select'),
     },
     
   ]

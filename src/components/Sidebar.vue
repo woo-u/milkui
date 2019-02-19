@@ -56,7 +56,7 @@ export default {
         {label: 'Radios', route: 'radios'},
         {label: 'Breadcrumbs', route: 'breadcrumbs'},
         {label: 'Confirm', route: 'confirm'},
-        {label: 'Select', route: 'selects'},
+        {label: 'Select', route: 'select'},
         {label: 'Text Input', route: 'input'},
       ],
 		}

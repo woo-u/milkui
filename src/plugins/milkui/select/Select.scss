@@ -4,6 +4,7 @@ $module: 'milk-select';
 
 .#{$module} {
   position: relative;
+  display: inline-block;
   select {
     padding: 7px 8px 7px 16px;
     line-height: 22px;
