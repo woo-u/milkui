@@ -3,32 +3,42 @@ import Dropbox from './Dropbox.vue'
 
 const MilkDropboxConstructor = Vue.extend(Dropbox)
 
-const createDropbox = function(options) {
-  this.instance = new MilkDropboxConstructor({
-    el: document.createElement('div')
-  });
-  console.log('createDropbox', this)
-
-  for (let prop in options) {
-    if (options.hasOwnProperty(prop)) {
-      this.instance[prop] = options[prop]
-    }
+class MilkDropbox {
+  constructor(){
+    this.instance = null
   }
 
-  document.body.appendChild(this.instance.$el)
-}
-
-const MilkDropbox = {
-  instance: null,
-  create: createDropbox,
-  open: function(){
+  open(){
     this.instance.visible = true
-  },
-  toggle: function(){
+  }
+
+  getVisible(){
+    if(this.instance) return this.instance.visible
+  }
+
+  getValues(){
+    return this.instance.selectedValue
+  }
+
+  create(options){
+    this.instance = new MilkDropboxConstructor({
+      el: document.createElement('div')
+    });
+  
+    for (let prop in options) {
+      if (options.hasOwnProperty(prop)) {
+        this.instance[prop] = options[prop]
+      }
+    }
+    document.body.appendChild(this.instance.$el)
+  }
+
+  toggle(){
     this.instance.visible = !this.instance.visible
-  },
-  destroy: function(){
-    let self = document.getElementById(MilkDropbox.instance.id)
+  }
+
+  destroy(){
+    let self = document.getElementById(this.instance.id)
     if(self) self.parentNode.removeChild(self)
   }
 }

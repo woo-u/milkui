@@ -6,9 +6,11 @@
     :style="{width: width+'px'}">
     <milk-input
       @click="handleClickIcon"
-      :value.sync="selectedItem.value" :label="label"
+      :value.sync="selectedValue" :label="label"
       name="icon" :placeholder="placeholder" :disabled="disabled"  icon="chevron-down" :clearble="clearble"/>
-    
+    <div class="milk-select__multiple" v-if="multiple">
+      <span class="milk-select__multiple-option" v-for="(item, index) in multipleSelectedValues" :key="'multiple'+index">{{getLabelFromValue(item)}}</span>
+    </div>
   </div>
 </template>
 
@@ -46,9 +48,6 @@ export default {
       type: Boolean,
       default: false
     },
-    caption: {
-      type: String
-    },
     width: {
       type: Number,
       default: 240
@@ -65,6 +64,10 @@ export default {
       type: Boolean,
       default: false
     },
+    multiple: {
+      type: Boolean,
+      default: false
+    },
     autoFilter: {
       type: Boolean,
       default: false
@@ -75,9 +78,11 @@ export default {
   },
   data () {
     return {
-      selectedItem: {label: '', value: ''},
+      selectedValue: '',
       isDropdown: false,
       id: null,
+      milkDropbox: new MilkDropbox(),
+      multipleSelectedValues: []
     }
   },
   computed: {
@@ -95,9 +100,9 @@ export default {
       if(!this.autoFilter) return this.options
       let options = this.options.filter(option => {
         if(['string', 'number'].includes(typeof option)){
-          return option.indexOf(this.selectedItem.value) !== -1
+          return option.indexOf(this.selectedValue) !== -1
         }else{
-          return option.label.indexOf(this.selectedItem.value) !== -1 || option.value.indexOf(this.selectedItem.value) !== -1
+          return option.label.indexOf(this.selectedValue) !== -1 || option.value.indexOf(this.selectedValue) !== -1
         }
       })
       return options
@@ -106,8 +111,8 @@ export default {
 
   methods: {
     handleClickIcon(event){
-      MilkDropbox.toggle()
-      this.isDropdown = !this.isDropdown
+      this.milkDropbox.toggle()
+      this.isDropdown = this.milkDropbox.getVisible()
     },
     getValueOfItem(item){
       return ['string', 'number'].includes(typeof item) ? item : item.value
@@ -115,9 +120,30 @@ export default {
     getLabelOfItem(item){
       return ['string', 'number'].includes(typeof item) ? item : item.label
     },
+    getLabelFromValue(value){
+      let fileterdOption = this.options.find(option => option.value === value)
+      return fileterdOption ? fileterdOption.label : ''
+    },
     callbackHandleClick(item){
-      this.selectedItem = item
-      this.isDropdown = false
+      this.selectedValue = item.length === 0 ? '' : item[0]
+      this.isDropdown = this.milkDropbox.getVisible()
+      if(this.multiple) this.multipleSelectedValues = this.milkDropbox.getValues()
+    },
+    getScreenCordinates(obj) {
+      let p = {};
+      p.x = obj.offsetLeft;
+      p.y = obj.offsetTop;
+      while (obj.offsetParent) {
+        p.x = p.x + obj.offsetParent.offsetLeft;
+        p.y = p.y + obj.offsetParent.offsetTop;
+        if (obj == document.getElementsByTagName("body")[0]) {
+          break;
+        }
+        else {
+          obj = obj.offsetParent;
+        }
+      }
+      return p;
     }
   },
 
@@ -129,20 +155,21 @@ export default {
   mounted(){
     let that = this
     let me = document.getElementById(this.id)
-    let meRect = me.getBoundingClientRect()
-    MilkDropbox.create({
+    let cordinates = this.getScreenCordinates(me)
+    this.milkDropbox.create({
       items: that.filteredOptions, 
       id: `dropbox-${that.id}`,
-      top: meRect.top + 47 ,
-      left: meRect.left,
+      top: cordinates.y + 47 ,
+      left: cordinates.x,
       width: me.offsetWidth,
       callbackHandleClick: that.callbackHandleClick,
+      multiple: that.multiple
     })
     //MilkDropbox.open()
   },
 
   beforeDestroy(){
-    MilkDropbox.destroy()
+    this.milkDropbox.destroy()
   }
 
 }

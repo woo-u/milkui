@@ -13,6 +13,12 @@
       </div>
       <app-code-box :code="singleCode" />
 
+      <!--Multiple select-->
+      <h3 class="milk-font--title10">Multiple select</h3>
+      <div class="ui-box milk--border--light-gray-01">
+        <milk-select name="default-select" :options="options" multiple/>
+      </div>
+
       <!--Clearable single select-->
       <h3 class="milk-font--title10">Clearable single select</h3>
       <div class="ui-box milk--border--light-gray-01">

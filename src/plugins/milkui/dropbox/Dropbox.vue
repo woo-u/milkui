@@ -6,7 +6,7 @@
         v-for="(item, index) in items" :key="index"
         class="milk-font--body10 milk--black"
         @click="handleClickOption(item)"
-        :class="{'selected': getValueOfItem(item) === selectedValue}">
+        :class="{'selected': selectedValue.includes(getValueOfItem(item))}">
         {{getLabelOfItem(item)}}
       </li>
     </ul>
@@ -40,7 +40,7 @@ export default {
   },
   data(){
     return {
-      selectedValue: '',
+      selectedValue: [],
       visible: false
     }
   },
@@ -54,9 +54,24 @@ export default {
     },
     handleClickOption(targetItem){
       console.log(targetItem)
-      this.selectedValue = this.getValueOfItem(targetItem)
-      this.visible = false
-      this.callbackHandleClick(targetItem)
+      const targetValue = this.getValueOfItem(targetItem)
+      if(!this.multiple){
+        this.selectedValue = []
+        this.visible = false
+      }
+      this.selectedValue = this.addOrRemove(this.selectedValue, targetValue)
+      console.log(this.selectedValue)
+      this.callbackHandleClick(this.selectedValue)
+    },
+
+    addOrRemove(array, value) {
+      let index = array.indexOf(value);
+      if (index === -1) {
+          array.push(value);
+      } else {
+          array.splice(index, 1);
+      }
+      return array
     }
   }
 }
