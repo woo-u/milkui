@@ -2,14 +2,18 @@
   <div
     :id="id"
     class="milk-select"
-    :class="isDropdown ? 'milk-select--open' : ''"
+    :class="[isDropdown ? 'milk-select--open' : '', multiple ? 'milk-select--multiple':'']"
     :style="{width: width+'px'}">
     <milk-input
       @click="handleClickIcon"
       :value.sync="selectedValue" :label="label"
       name="icon" :placeholder="placeholder" :disabled="disabled"  icon="chevron-down" :clearble="clearble"/>
-    <div class="milk-select__multiple" v-if="multiple">
-      <span class="milk-select__multiple-option" v-for="(item, index) in multipleSelectedValues" :key="'multiple'+index">{{getLabelFromValue(item)}}</span>
+    <div class="milk-select__multiple milk-font--body10" v-if="multiple" :style="{width: width+'px'}">
+      <span class="milk-select__multiple-option milk--bg--light-gray-03" v-for="(item, index) in multipleSelectedValues" :key="'multiple'+index">
+        {{getLabelFromValue(item)}} 
+        <i @click="handleClickRemoveOption(item)" class="mk-closed" />
+      </span>
+      <i @click="handleClickIcon" class="mk-chevron-down" />
     </div>
   </div>
 </template>
@@ -114,6 +118,10 @@ export default {
       this.milkDropbox.toggle()
       this.isDropdown = this.milkDropbox.getVisible()
     },
+    handleClickRemoveOption(value){
+      this.milkDropbox.removeValue(value)
+      this.repositionDropbox()
+    },
     getValueOfItem(item){
       return ['string', 'number'].includes(typeof item) ? item : item.value
     },
@@ -127,7 +135,10 @@ export default {
     callbackHandleClick(item){
       this.selectedValue = item.length === 0 ? '' : item[0]
       this.isDropdown = this.milkDropbox.getVisible()
-      if(this.multiple) this.multipleSelectedValues = this.milkDropbox.getValues()
+      if(this.multiple) {
+        this.multipleSelectedValues = this.milkDropbox.getValues()
+        this.repositionDropbox()
+      }
     },
     getScreenCordinates(obj) {
       let p = {};
@@ -144,6 +155,23 @@ export default {
         }
       }
       return p;
+    },
+
+    repositionDropbox(){
+      this.$nextTick(function() {
+        let me = document.getElementById(this.id)
+        let cordinates = this.getScreenCordinates(me)
+        let stickTop = me.offsetHeight
+        this.milkDropbox.updatePosition(cordinates.y + stickTop, cordinates.x)
+      });
+    },
+
+    debounce(func){
+      var timer;
+      return function(event){
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(func,100,event);
+      };
     }
   },
 
@@ -155,21 +183,29 @@ export default {
   mounted(){
     let that = this
     let me = document.getElementById(this.id)
-    let cordinates = this.getScreenCordinates(me)
     this.milkDropbox.create({
       items: that.filteredOptions, 
       id: `dropbox-${that.id}`,
-      top: cordinates.y + 47 ,
-      left: cordinates.x,
+      top: 0,
+      left: 0,
       width: me.offsetWidth,
       callbackHandleClick: that.callbackHandleClick,
       multiple: that.multiple
     })
+    this.repositionDropbox()
     //MilkDropbox.open()
+    window.addEventListener("resize", that.debounce(function(e){
+      that.repositionDropbox()
+    }));
+
   },
 
   beforeDestroy(){
+    let that = this
     this.milkDropbox.destroy()
+    window.removeEventListener("resize", that.debounce(function(e){
+      that.repositionDropbox()
+    }))
   }
 
 }

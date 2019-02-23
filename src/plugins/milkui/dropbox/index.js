@@ -20,6 +20,11 @@ class MilkDropbox {
     return this.instance.selectedValue
   }
 
+  removeValue(value){
+    this.instance.selectedValue = this.instance.addOrRemove(this.instance.selectedValue, value)
+    return this.instance.selectedValue
+  }
+
   create(options){
     this.instance = new MilkDropboxConstructor({
       el: document.createElement('div')
@@ -31,6 +36,11 @@ class MilkDropbox {
       }
     }
     document.body.appendChild(this.instance.$el)
+  }
+
+  updatePosition(top, left){
+    this.instance.top = top
+    this.instance.left = left
   }
 
   toggle(){

@@ -26,6 +26,36 @@ $module: 'milk-select';
     color: $c-dark-gray;
   }
 
+  &__multiple{
+    top: 0;
+    left: 0;
+    border: 1px solid #87634D;
+    margin: 4px 0;
+    padding: 4px 8px;
+    padding-right: 30px;
+    padding-bottom: 0;
+    color: #303133;
+    text-align: left;
+    line-height: 22px;
+    min-height: 44px;
+    i.mk-chevron-down {
+      position: absolute;
+      right: 5px;
+      top: 14px;
+      cursor: pointer;
+      width: 24px;
+      line-height: 24px;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  &__multiple-option {
+    padding: 4px 8px;
+    line-height: 26px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 .#{$module}--open {
@@ -44,3 +74,12 @@ $module: 'milk-select';
     transform: rotate(180deg);
   }
 }
+
+.#{$module}--multiple {
+  .milk-input {
+    display: none;
+    input, i {
+      visibility: hidden;
+    }
+  }
+} 
