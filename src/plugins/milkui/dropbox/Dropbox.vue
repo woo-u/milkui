@@ -53,14 +53,12 @@ export default {
       return ['string', 'number'].includes(typeof item) ? item : item.label
     },
     handleClickOption(targetItem){
-      console.log(targetItem)
       const targetValue = this.getValueOfItem(targetItem)
       if(!this.multiple){
         this.selectedValue = []
         this.visible = false
       }
       this.selectedValue = this.addOrRemove(this.selectedValue, targetValue)
-      console.log(this.selectedValue)
       this.callbackHandleClick(this.selectedValue)
     },
 

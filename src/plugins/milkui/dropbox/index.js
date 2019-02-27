@@ -20,8 +20,22 @@ class MilkDropbox {
     return this.instance.selectedValue
   }
 
+  setValue(value){
+    this.instance.selectedValue = value
+    return this.instance.selectedValue
+  }
+
+  setItems(items){
+    this.instance.items = items
+  }
+
   removeValue(value){
     this.instance.selectedValue = this.instance.addOrRemove(this.instance.selectedValue, value)
+    return this.instance.selectedValue
+  }
+
+  clear(){
+    this.instance.selectedValue = []
     return this.instance.selectedValue
   }
 

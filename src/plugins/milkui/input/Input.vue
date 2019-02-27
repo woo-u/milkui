@@ -137,6 +137,7 @@ export default {
     handleClickClear(evt){
       if (evt) evt.preventDefault()
       this.selfModel = ''
+      this.$emit('clear', evt)
       this.$emit('change', '', evt)
     },
     handleInputChange(evt){

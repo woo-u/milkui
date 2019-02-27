@@ -1,14 +1,19 @@
 <template>
   <div
     :id="id"
+    v-on:mouseover="isHover = true"
+    v-on:mouseleave="isHover = false"
     class="milk-select"
-    :class="[isDropdown ? 'milk-select--open' : '', multiple ? 'milk-select--multiple':'']"
+    :class="[isDropdown ? 'milk-select--open' : '', multiple ? 'milk-select--multiple':'', isHover ? 'milk-select--hover': '']"
     :style="{width: width+'px'}">
     <milk-input
       @click="handleClickIcon"
-      :value.sync="selectedValue" :label="label"
+      @clear="handleClearInput"
+      @change="handleChangeInput"
+      :value.sync="Array.isArray(selectedValue) ? selectedValue[0] : selectedValue" :label="label"
+      v-if="multipleSelectedValues.length === 0"
       name="icon" :placeholder="placeholder" :disabled="disabled"  icon="chevron-down" :clearble="clearble"/>
-    <div class="milk-select__multiple milk-font--body10" v-if="multiple" :style="{width: width+'px'}">
+    <div class="milk-select__multiple milk-font--body10" v-if="multiple && multipleSelectedValues.length > 0" :style="{width: width+'px'}">
       <span class="milk-select__multiple-option milk--bg--light-gray-03" v-for="(item, index) in multipleSelectedValues" :key="'multiple'+index">
         {{getLabelFromValue(item)}} 
         <i @click="handleClickRemoveOption(item)" class="mk-closed" />
@@ -86,7 +91,8 @@ export default {
       isDropdown: false,
       id: null,
       milkDropbox: new MilkDropbox(),
-      multipleSelectedValues: []
+      multipleSelectedValues: [],
+      isHover: false,
     }
   },
   computed: {
@@ -118,8 +124,18 @@ export default {
       this.milkDropbox.toggle()
       this.isDropdown = this.milkDropbox.getVisible()
     },
+    handleClearInput(){
+      this.milkDropbox.clear()
+    },
+    handleChangeInput(value){
+      if(!Array.isArray(value)) {
+        this.selectedValue = this.milkDropbox.setValue(value)
+        if(this.focusable) this.milkDropbox.setItems(this.filteredOptions)
+      }
+      
+    },
     handleClickRemoveOption(value){
-      this.milkDropbox.removeValue(value)
+      this.selectedValue = this.milkDropbox.removeValue(value)
       this.repositionDropbox()
     },
     getValueOfItem(item){
@@ -142,6 +158,7 @@ export default {
     },
     getScreenCordinates(obj) {
       let p = {};
+      if(!obj) return {x:0, y:0}
       p.x = obj.offsetLeft;
       p.y = obj.offsetTop;
       while (obj.offsetParent) {
@@ -198,6 +215,12 @@ export default {
       that.repositionDropbox()
     }));
 
+  },
+
+  watch: {
+    selectedValue: function(val){
+      this.$emit('change', val)
+    }
   },
 
   beforeDestroy(){

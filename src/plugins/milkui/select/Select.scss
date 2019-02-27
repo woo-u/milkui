@@ -22,22 +22,25 @@ $module: 'milk-select';
     background-color: $c-light-gray-03;
   }
   .milk-input__icon {
-    transition:transform .7s;
     color: $c-dark-gray;
+  }
+  .mk-chevron-down {
+    transition:transform .7s;
   }
 
   &__multiple{
     top: 0;
     left: 0;
-    border: 1px solid #87634D;
+    border: 1px solid $c-white;
+    border-bottom: 1px solid $c-light-gray-01;
     margin: 4px 0;
     padding: 4px 8px;
     padding-right: 30px;
     padding-bottom: 0;
-    color: #303133;
+    color: $c-black;
     text-align: left;
     line-height: 22px;
-    min-height: 44px;
+    min-height: 40px;
     i.mk-chevron-down {
       position: absolute;
       right: 5px;
@@ -51,7 +54,7 @@ $module: 'milk-select';
   }
   &__multiple-option {
     padding: 4px 8px;
-    line-height: 26px;
+    line-height: 22px;
     display: inline-block;
     margin-right: 4px;
     margin-bottom: 4px;
@@ -73,13 +76,17 @@ $module: 'milk-select';
   .milk-input__icon {
     transform: rotate(180deg);
   }
+  .#{$module}__multiple {
+    border-color: $c-primary;
+  }
 }
 
-.#{$module}--multiple {
-  .milk-input {
-    display: none;
-    input, i {
-      visibility: hidden;
-    }
+.#{$module}--hover {
+  .milk-input input, .milk-input input:hover {
+    border-color: $c-light-gray-03;
+    background-color: $c-light-gray-03;
   }
+} 
+.#{$module}--multiple {
+
 } 
