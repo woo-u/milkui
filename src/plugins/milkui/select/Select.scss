@@ -21,6 +21,9 @@ $module: 'milk-select';
     border-color: $c-light-gray-03;
     background-color: $c-light-gray-03;
   }
+  .milk-input input:disabled {
+    border-bottom: 1px solid $c-light-gray-01;
+  }
   .milk-input__icon {
     color: $c-dark-gray;
   }
@@ -82,11 +85,19 @@ $module: 'milk-select';
 }
 
 .#{$module}--hover {
-  .milk-input input, .milk-input input:hover {
+  .milk-input input {
     border-color: $c-light-gray-03;
     background-color: $c-light-gray-03;
+  }
+  .milk-input input:hover {
+    border-color: $c-white;
+    background-color: $c-light-gray-04;
+  }
+  .milk-input input:disabled {
+    border-color: $c-white;
+    border-bottom: 1px solid $c-light-gray-01;
   }
 } 
 .#{$module}--multiple {
 
-} 
+}

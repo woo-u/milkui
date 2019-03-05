@@ -74,7 +74,7 @@ $module: 'milk-input';
 
 .#{$module}--disabled {
   ::placeholder {
-    color: $c-dark-gray;
-    opacity: 0.3;
+    color: $c-light-gray-01;
   }
+  .milk-input__icon { color: $c-light-gray-01; }
 }
