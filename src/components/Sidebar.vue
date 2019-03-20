@@ -1,10 +1,13 @@
 <template>
 	<div id="sidebar">
-		<h1>
-      <router-link to="/">milk ui</router-link>
-    </h1>
+		<router-link to="/">
+      <h1>milk ui</h1>
+    </router-link>
 
     <!-- <h2 class="mt--neutrals-dark-gray-02">Style</h2> -->
+    <!-- <router-link to="/home" class="home">
+      <div class="menu mt--neutrals-dark-gray-02">Getting Started</div>
+    </router-link> -->
     <div
       class="menu mt--neutrals-dark-gray-02"
       @click="openStyleMenu = !openStyleMenu">
@@ -43,21 +46,20 @@ export default {
       openStyleMenu: true,
       openComponentsMenu: true,
       styles: [
-        {label: 'Logos', route: 'logos'},
         {label: 'Colors', route: 'colors'},
         {label: 'Typography', route: 'typography'},
         {label: 'Iconography', route: 'iconography'},
       ],
       components: [
         {label: 'Buttons', route: 'buttons'},
-        {label: 'Notification', route: 'notification'},
-        {label: 'Modals', route: 'modals'},
+        // {label: 'Notification', route: 'notification'},
+        // {label: 'Modals', route: 'modals'},
         {label: 'Checkboxes', route: 'checkboxes'},
-        {label: 'Radios', route: 'radios'},
+        {label: 'Radio Buttons', route: 'radios'},
         {label: 'Breadcrumbs', route: 'breadcrumbs'},
-        {label: 'Confirm', route: 'confirm'},
+        // {label: 'Confirm', route: 'confirm'},
         {label: 'Select', route: 'select'},
-        {label: 'Text Input', route: 'input'},
+        // {label: 'Text Input', route: 'input'},
       ],
 		}
 	},
@@ -96,6 +98,15 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 24px 85px 36px 24px;
+}
+.home {
+  &.router-link-active .menu {
+    border-left: 4px solid $c-primary;
+    color: $c-primary;
+  }
+  .menu {
+    padding: 16px 15px;
+  }
 }
 .menu {
   padding-left: 20px;
