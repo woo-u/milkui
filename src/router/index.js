@@ -19,8 +19,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'colors',
-      component: () => AsyncComponent('Colors'),
+      name: 'home',
+      component: () => AsyncComponent('Home'),
     },
     {
       path: '/colors',

@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import MilkUI from './plugins/milkui/index.js'
 import VueHighlightJS from 'vue-highlightjs'
+import '@/plugins/milkui/styles/Style.scss'
 
 Vue.config.productionTip = false
 

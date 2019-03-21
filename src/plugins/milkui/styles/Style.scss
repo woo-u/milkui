@@ -1,3 +1,4 @@
+@import './Variables';
 @import './Colors.scss';
 @import './Fonts.scss';
 @import './Icons.scss';
@@ -8,4 +9,9 @@ body {
   font-family: 'noto sans', 'Roboto', 'Segoe UI', 'BlinkMacSystemFont','Malgun Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p a {
+  color: $c-primary;
+  text-decoration: underline;
 }
