@@ -1,0 +1,8 @@
+.DS_Store
+.git*
+docs/
+src/assets/
+src/components/
+src/router/
+node_modules/
+public/

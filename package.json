@@ -1,9 +1,10 @@
 {
-  "name": "milkui",
+  "name": "milk-ui",
+  "description": "UI template for use in a vue-js project.",
   "version": "0.1.0",
   "private": false,
   "author": "Jeongwoo Ahn <guruahn@gmail.com>, Elisabet <elisabet517@naver.com>",
-  "main": "/lib/mtui.install.js",
+  "main": "/src/plugins/milkui/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/woo-u/milkui.git"
