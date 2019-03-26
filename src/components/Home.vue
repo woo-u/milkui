@@ -25,10 +25,11 @@ export default {
   props: {},
   data(){
     return {
-      codeInstall: 'npm i milkui -S',
+      codeInstall: 'npm i @guruahn/milkui -S',
       codeQuick: `import Vue from ‘vue’;
-import MilkUI from ‘milkui’;
 import App from ‘./App/vue’;
+import MilkUI from '@guruahn/milkui'
+import '@guruahn/milkui/src/plugins/milkui/styles/Style.scss'
 
 Vue.use(MilkUI);
 
