@@ -80,6 +80,12 @@ ul, li {
 	background: $c-light-gray-03;
 	font-family: Menlo,Monaco,Consolas,Courier,monospace;
 	line-height: 1.8;
+	.hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-doctag, .hljs-name {
+		color: #87634D;
+	}
+	.hljs-type, .hljs-string, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
+		color: #b5754e;
+	}
 }
 
 //ui box

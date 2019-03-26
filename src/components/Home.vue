@@ -1,18 +1,18 @@
 <template>
   <div id="content" class="milk-home">
     <h2 class="milk-font--title20">Getting Started</h2>
-    <p class="milk-font--body20 milk--black">milk-ui is a side project of <a href="http://ahnyuri.com/">designer yuri</a> and <a href="https://medium.com/@jeongwooahn">developer Jeongwoo</a>.</p>
-    <p class="milk-font--body20 milk--black">Our goal is to create a UI template for use in a vue-js project with a unique design.</p>
-    <p class="milk-font--body20 milk--black">We do not support many components yet, but we will continue to update.</p>
+    <p class="milk-font--body20 milk--black"><i class="mk-cow"></i> milkui is a side project of <a href="http://ahnyuri.com/">designer yuri</a> and <a href="https://medium.com/@jeongwooahn">developer Jeongwoo</a>.</p>
+    <p class="milk-font--body20 milk--black">Our goal is to create a UI template for use in a vue-js project with a unique design. <i class="mk-star"></i></p>
+    <p class="milk-font--body20 milk--black">We do not support many components yet, but we will continue to update. <i class="mk-smile"></i></p>
 
     <h3 class="milk-font--title20">Installation</h3>
     <div class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
-      <pre v-highlightjs="codeInstall"><code class="html"></code></pre>
+      <pre v-highlightjs="codeInstall"><code class="http"></code></pre>
     </div>
 
     <h3 class="milk-font--title20">Quick Start</h3>
     <div class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
-      <pre v-highlightjs="codeQuick"><code class="html"></code></pre>
+      <pre v-highlightjs="codeQuick"><code class="javascript"></code></pre>
     </div>
 
     <h3 class="milk-font--title20">Have Questions?</h3>

@@ -5,6 +5,10 @@
       <h3 class="milk-font--title10">Typeface</h3>
       <div class="right">
         <p class="milk-font--title30">Noto sans</p>
+        <p class="milk-font--body20">The main font-family is noto-sans, but if it is not installed, it is recommended to use the default font of each platform.</p>
+        <div class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
+          <pre v-highlightjs="fontFamily"><code class="javascript"></code></pre>
+        </div>
       </div>
     </div>
     <div class="typo-box weight">
@@ -27,6 +31,7 @@
         <p class="milk-font--caption10"><span class="title">Caption 10</span> <span class="milk-font--body20">11px</span></p>
       </div>
     </div>
+    
   </div>
 </template>
 <script>
@@ -34,7 +39,9 @@ export default {
   name: 'typography',
   props: {},
   data(){
-    return {}
+    return {
+      fontFamily: "font-family: 'noto sans', 'Roboto', 'Segoe UI', 'BlinkMacSystemFont','Malgun Gothic', sans-serif;",
+    }
   }
 }
 </script>
@@ -60,7 +67,10 @@ export default {
   }
   .typo-box .right {
     border-bottom: 1px solid #dcdfe6;
-
+  }
+  pre {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 </style>

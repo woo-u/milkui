@@ -4,10 +4,9 @@
       <h1>milk ui</h1>
     </router-link>
 
-    <!-- <h2 class="mt--neutrals-dark-gray-02">Style</h2> -->
-    <!-- <router-link to="/home" class="home">
+    <router-link to="/home" class="home" :class="$route.name === 'home' ? 'router-link-active' : ''">
       <div class="menu mt--neutrals-dark-gray-02">Getting Started</div>
-    </router-link> -->
+    </router-link>
     <div
       class="menu mt--neutrals-dark-gray-02"
       @click="openStyleMenu = !openStyleMenu">
@@ -103,9 +102,10 @@ h1 {
   &.router-link-active .menu {
     border-left: 4px solid $c-primary;
     color: $c-primary;
+    font-weight: bold;
   }
   .menu {
-    padding: 16px 15px;
+    padding: 16px 20px;
   }
 }
 .menu {

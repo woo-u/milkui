@@ -23,6 +23,11 @@ export default new Router({
       component: () => AsyncComponent('Home'),
     },
     {
+      path: '/home',
+      name: 'home',
+      component: () => AsyncComponent('Home'),
+    },
+    {
       path: '/colors',
       name: 'colors',
       component: () => AsyncComponent('Colors'),
