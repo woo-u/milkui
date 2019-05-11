@@ -1,9 +1,21 @@
 <template>
   <div id="content" class="milk-home">
     <h2 class="milk-font--title20">Getting Started</h2>
-    <p class="milk-font--body20 milk--black"><i class="mk-cow"></i> milkui is a side project of <a href="http://ahnyuri.com/">designer yuri</a> and <a href="https://medium.com/@jeongwooahn">developer Jeongwoo</a>.</p>
-    <p class="milk-font--body20 milk--black">Our goal is to create a UI template for use in a vue-js project with a unique design. <i class="mk-star"></i></p>
-    <p class="milk-font--body20 milk--black">We do not support many components yet, but we will continue to update. <i class="mk-smile"></i></p>
+    <p class="milk-font--body20 milk--black">
+      <i class="mk-cow"></i> milkui is a side project of
+      <a href="http://ahnyuri.com/">designer yuri</a> and
+      <a href="https://medium.com/@jeongwooahn">developer Jeongwoo</a>.
+    </p>
+    <p class="milk-font--body20 milk--black">
+      Our goal is to create a UI template for use in a vue-js project with a unique design.
+      <i
+        class="mk-star"
+      ></i>
+    </p>
+    <p class="milk-font--body20 milk--black">
+      We do not support many components yet, but we will continue to update.
+      <i class="mk-smile"></i>
+    </p>
 
     <h3 class="milk-font--title20">Installation</h3>
     <div class="content milk--bg--light-gray-03 milk--border--light-gray-01 milk-font--body10">
@@ -16,16 +28,21 @@
     </div>
 
     <h3 class="milk-font--title20">Have Questions?</h3>
-    <p class="milk-font--body20 milk--black">Email us (<a href="mailto:guruahn@gmail.com">developer</a> / <a href="mailto:elisabet517@naver.com ">designer</a>) or <a href="https://github.com/woo-u/milkui/issues">issue</a> in Github.</p>
+    <p class="milk-font--body20 milk--black">
+      Email us (
+      <a href="mailto:guruahn@gmail.com">developer</a> /
+      <a href="mailto:elisabet517@naver.com ">designer</a>) or
+      <a href="https://github.com/woo-u/milkui/issues">issue</a> in Github.
+    </p>
   </div>
 </template>
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
   props: {},
-  data(){
+  data() {
     return {
-      codeInstall: 'npm i @guruahn/milkui -S',
+      codeInstall: "npm i @guruahn/milkui -S",
       codeQuick: `import Vue from ‘vue’;
 import App from ‘./App/vue’;
 import MilkUI from '@guruahn/milkui'
@@ -34,12 +51,12 @@ import '@guruahn/milkui/src/plugins/milkui/styles/Style.scss'
 Vue.use(MilkUI);
 
 new Vue({
-	el: ‘#app’,
-	render: h => h(App)
+  el: ‘#app’,
+  render: h => h(App)
 });`
-    }
+    };
   }
-}
+};
 </script>
 <style lang='scss'>
 .milk-home {
@@ -49,9 +66,9 @@ new Vue({
   }
   h3 {
     font-size: 32px;
-		font-weight: 300 !important;
-		line-height: 2;
-		color: #263238;
+    font-weight: 300 !important;
+    line-height: 2;
+    color: #263238;
   }
   pre {
     padding-left: 17px;

@@ -1,4 +1,7 @@
 @import '../plugins/milkui/styles/Variables';
+body {
+	color: $c-black;
+}
 a {
   text-decoration: none;
 }
@@ -25,9 +28,9 @@ ul, li {
   padding-right: 64px;
   overflow: hidden;
 	h2 {
-		border-bottom: 1px solid #dcdfe6;
+		border-bottom: 1px solid $c-light-gray-01;
 		font-size: 32px;
-		font-weight: 300;
+		font-weight: 600;
 		line-height: 2;
 		color: #263238;
 		margin-bottom: 65px;

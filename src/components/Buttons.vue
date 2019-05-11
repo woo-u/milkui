@@ -7,77 +7,84 @@
     </nav>
     <div v-if="nav === 'code'">
       <!--Primary button-->
-      <h3 class="milk-font--title10">Primary button</h3>
+      <h3 class="milk-font--title10">Primary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="primary">Primary Button</milk-button>
         <milk-button type="primary" disabled @click="handleClick">Primary Button</milk-button>
       </div>
-      <app-code-box :code="primaryCode" />
+      <app-code-box :code="primaryCode"/>
 
       <!--Secondary button-->
-      <h3 class="milk-font--title10">Secondary button</h3>
+      <h3 class="milk-font--title10">Secondary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="secondary">Secondary button</milk-button>
         <milk-button disabled @click="handleClick">Secondary button</milk-button>
       </div>
-      <app-code-box :code="secondaryCode" />
+      <app-code-box :code="secondaryCode"/>
 
       <!--Small primary button-->
-      <h3 class="milk-font--title10">Small primary button</h3>
+      <h3 class="milk-font--title10">Small Primary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="primary" size="small">primary button</milk-button>
         <milk-button type="primary" disabled @click="handleClick" size="small">primary button</milk-button>
       </div>
-      <app-code-box :code="primarySamllCode" />
-      
+      <app-code-box :code="primarySamllCode"/>
+
       <!--Small secondary button-->
-      <h3 class="milk-font--title10">Small secondary button</h3>
+      <h3 class="milk-font--title10">Small Secondary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="secondary" size="small">secondary button</milk-button>
         <milk-button type="secondary" disabled @click="handleClick" size="small">secondary button</milk-button>
       </div>
-      <app-code-box :code="secondarySamllCode" />
+      <app-code-box :code="secondarySamllCode"/>
 
       <!--Subtle button-->
-      <h3 class="milk-font--title10">Subtle button</h3>
+      <h3 class="milk-font--title10">Subtle Button</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-button @click="handleClick" type="subtle">Subtle</milk-button>
         <milk-button type="subtle" disabled @click="handleClick">Subtle</milk-button>
       </div>
-      <app-code-box :code="subtleCode" />
+      <app-code-box :code="subtleCode"/>
     </div>
-    
 
     <div v-if="nav === 'style'" class="nav-style">
       <h3 class="milk-font--title10">Colors</h3>
       <div>
-        <img :src="stylePrimary" />
+        <img :src="stylePrimary">
         <div class="style-box">
           <ul>
-            <li><strong>Default</strong></li>
+            <li>
+              <strong>Default</strong>
+            </li>
             <li>Box-fill: #87634D</li>
             <li>Text color: #FFFFFF</li>
           </ul>
           <ul>
-            <li><strong>Hover</strong></li>
+            <li>
+              <strong>Hover</strong>
+            </li>
             <li>Box-fill: #8F6D59</li>
             <li>Box-border: #FFFFFF</li>
             <li>Text color: #FFFFFF</li>
           </ul>
           <ul>
-            <li><strong>Active</strong></li>
+            <li>
+              <strong>Active</strong>
+            </li>
             <li>Box-fill: #76543E</li>
             <li>Text color: #FFFFFF</li>
           </ul>
           <ul>
-            <li><strong>Disabled</strong></li>
+            <li>
+              <strong>Disabled</strong>
+            </li>
             <li>Box-fill: #EBECF0</li>
             <li>Text color: #606266 opacity 30%</li>
           </ul>
         </div>
       </div>
       <div>
-        <img :src="styleSecondary" />
+        <img :src="styleSecondary">
         <div class="style-box">
           <ul>
             <li>Default</li>
@@ -102,7 +109,7 @@
         </div>
       </div>
       <div>
-        <img :src="styleSubtle" />
+        <img :src="styleSubtle">
         <div class="style-box">
           <ul>
             <li>Default</li>
@@ -125,31 +132,35 @@
 
       <h3 class="milk-font--title10 title-sizing">Sizing</h3>
       <div>
-        <img :src="styleMedium" />
+        <img :src="styleMedium">
         <div class="style-box">
           <ul>
-            <li><strong>Medium size</strong></li>
+            <li>
+              <strong>Medium size</strong>
+            </li>
             <li>Height: 48px</li>
             <li>Horizontal padding: 16px</li>
             <li>Vertical padding: 12px</li>
             <li>Minimum width: 100px</li>
             <li>Font size: 16px</li>
-            <li>Line height: 24px </li>
+            <li>Line height: 24px</li>
             <li>border: 2px</li>
           </ul>
         </div>
       </div>
       <div>
-        <img :src="styleSmall" />
+        <img :src="styleSmall">
         <div class="style-box">
           <ul>
-            <li><strong>Small size</strong></li>
+            <li>
+              <strong>Small size</strong>
+            </li>
             <li>Height: 38px</li>
             <li>Horizontal padding: 12px</li>
             <li>Vertical padding: 9px</li>
             <li>Minimum width: 60px</li>
             <li>Font size: 12px</li>
-            <li>Line height: 20px </li>
+            <li>Line height: 20px</li>
             <li>border: 1px</li>
           </ul>
         </div>
@@ -159,18 +170,18 @@
 </template>
 
 <script>
-import CodeBox from './CodeBox'
+import CodeBox from "./CodeBox";
 export default {
-  name: 'buttons',
+  name: "buttons",
   components: {
     AppCodeBox: CodeBox
   },
   props: {
     msg: String
   },
-  data(){
+  data() {
     return {
-      nav: 'code',
+      nav: "code",
       primaryCode: `<milk-button type="primary">Primary Button</milk-button>
 <milk-button type="primary" disabled>Primary Button</milk-button>`,
       secondaryCode: `<milk-button type="secondary">Secondary button</milk-button>
@@ -179,26 +190,28 @@ export default {
 <milk-button type="primary" size="small" disabled>primary button</milk-button>`,
       secondarySamllCode: `<milk-button type="secondary" size="small">secondary button</milk-button>
 <milk-button type="secondary" disabled size="small">secondary button</milk-button>`,
-      subtleCode:`<milk-button type="subtle">Subtle</milk-button>
+      subtleCode: `<milk-button type="subtle">Subtle</milk-button>
 <milk-button type="subtle" disabled>Subtle</milk-button>`,
-      stylePrimary: require('../assets/buttons/btn-style-color-primary.svg'),
-      styleSecondary: require('../assets/buttons/btn-style-color-secondary.svg'),
-      styleSubtle: require('../assets/buttons/btn-style-color-subtle.svg'),
-      styleMedium: require('../assets/buttons/btn-style-sizing-medium.svg'),
-      styleSmall: require('../assets/buttons/btn-style-sizing-small.svg'),
-    }
+      stylePrimary: require("../assets/buttons/btn-style-color-primary.png"),
+      styleSecondary: require("../assets/buttons/btn-style-color-secondary.png"),
+      styleSubtle: require("../assets/buttons/btn-style-color-subtle.svg"),
+      styleMedium: require("../assets/buttons/btn-style-sizing-medium.png"),
+      styleSmall: require("../assets/buttons/btn-style-sizing-small.png")
+    };
   },
   methods: {
-    handleClick(){
+    handleClick() {
       //console.log('ddd')
     }
   }
-}
+};
 </script>
 
 <style lang='scss'>
-@import '../plugins/milkui/styles/Variables';
-#content.milk-buttons{
-  
+@import "../plugins/milkui/styles/Variables";
+#content.milk-buttons {
+  img {
+    width: 500px;
+  }
 }
 </style>
