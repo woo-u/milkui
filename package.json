@@ -1,7 +1,7 @@
 {
   "name": "@guruahn/milkui",
   "description": "UI template for use in a vue-js project.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "author": "Jeongwoo Ahn <guruahn@gmail.com>, Elisabet <elisabet517@naver.com>",
   "main": "/src/plugins/milkui/index.js",
