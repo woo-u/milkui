@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 const AsyncComponent = (component) => ({
   // The component to load (should be a Promise)
-  component: import(/* webpackChunkName: "view-[request]" */'@/components/'+component),
+  component: import(/* webpackChunkName: "view-[request]" */'@/components/' + component),
   // Delay before showing the loading component. Default: 200ms.
   delay: 200,
   // The error component will be displayed if a timeout is
@@ -67,6 +67,11 @@ export default new Router({
       name: 'select',
       component: () => AsyncComponent('Select'),
     },
-    
+    {
+      path: '/input',
+      name: 'input',
+      component: () => AsyncComponent('Input'),
+    },
+
   ]
 })

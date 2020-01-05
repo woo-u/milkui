@@ -6,6 +6,7 @@ import MilkRadio from './radio/Radio.vue'
 import MilkBreadcrumb from './breadcrumb/Breadcrumb.vue'
 import MilkSelect from './select/MilkSelect.vue'
 import Input from './input/Input.vue'
+import Modal from './modal/Modal.vue'
 
 const components = [
   MilkButton,
@@ -14,14 +15,15 @@ const components = [
   MilkRadio,
   MilkBreadcrumb,
   MilkSelect,
-  Input
+  Input,
+  Modal,
 ]
 
 const MilkUI = {
   install(Vue) {
     components.map(component => {
-			Vue.component(component.name, component)
-		})
+      Vue.component(component.name, component)
+    })
   }
 };
 
