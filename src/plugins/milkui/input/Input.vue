@@ -34,7 +34,7 @@
       <span
         v-if="!valid"
         :style="{width: width+'px'}"
-        class="milk-input__invalid-msg mt--bg--error milk--strawberry milk-font--caption10"
+        class="milk-input__invalid-msg milk--bg--strawberry milk--white milk-font--caption10"
       >{{inValidMsg}}</span>
       <span
         :style="{width: width+'px'}"

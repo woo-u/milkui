@@ -95,6 +95,87 @@
       </div>
       <app-code-box :code="invalidCode" />
     </div>
+    <!-- End nav code-->
+
+    <div v-if="nav === 'style'" class="nav-style">
+      <h3 class="milk-font--title10">Colors</h3>
+      <div>
+        <img :src="styleColor" />
+        <div class="style-box">
+          <ul>
+            <li>
+              <strong>Default</strong>
+            </li>
+            <li>Border: #DCDFE6</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #DCDFE6</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Hover</strong>
+            </li>
+            <li>Border: #606266</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #DCDFE6</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Focus</strong>
+            </li>
+            <li>Border: #87634D</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #DCDFE6</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Type</strong>
+            </li>
+            <li>Border: #87634D</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #303133</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Enter valid</strong>
+            </li>
+            <li>Border: #DCDFE6</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #303133</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Enter invalid</strong>
+            </li>
+            <li>Border: #F96580</li>
+            <li>Box-fill: #FFFFFF</li>
+            <li>Text color: #303133</li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Disabled</strong>
+            </li>
+            <li>Border: #DCDFE6</li>
+            <li>Box-fill: #FAFBFC</li>
+            <li>Text color: #DCDFE6</li>
+          </ul>
+        </div>
+        <!--end stylebox -->
+      </div>
+      <h3 class="milk-font--title10">Sizing</h3>
+      <div>
+        <img :src="styleSizing" />
+        <div class="style-box">
+          <ul>
+            <li>Height: 40px</li>
+            <li>Border: 1px</li>
+            <li>Font size: 14px</li>
+            <li>Label font size: 12px</li>
+            <li>Caption font size: 11px</li>
+          </ul>
+        </div>
+        <!--end stylebox -->
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -107,6 +188,7 @@ export default {
     AppCodeBox: CodeBox
   },
   data() {
+    /* eslint-disable */
     return {
       nav: "code",
       labelModel: null,
@@ -117,7 +199,9 @@ export default {
       disabledModel: null,
       iconModel: null,
       clearbleModel: null,
-      invalidModel: null,
+      invalidModel: "333",
+      styleColor: require("../assets/input/img-textinput-color.svg"),
+      styleSizing: require("../assets/input/img-textinput-sizing.svg"),
       labelCode: `<template>
   <div>
     <milk-input name="label-input" v-model="labelModel" placeholder="Enter your details heres" />
@@ -204,7 +288,7 @@ export default {
   export default {
     data() {
       return {
-        clearbleModel: null
+        invalidModel: '333'
       };
     },
     computed: {
@@ -225,10 +309,7 @@ export default {
 
   computed: {
     valid() {
-      if (
-        this.invalidModel !== null &&
-        Number.isInteger(this.invalidModel * 1)
-      ) {
+      if (this.invalidModel && Number.isInteger(this.invalidModel * 1)) {
         return false;
       }
       return true;
