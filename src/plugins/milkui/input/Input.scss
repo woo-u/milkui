@@ -4,6 +4,7 @@ $module: 'milk-input';
 
 .#{$module} {
   position: relative;
+  text-align: left;
   input, textarea {
     padding: 7px 16px;
     margin: 4px 0;
@@ -15,7 +16,7 @@ $module: 'milk-input';
     }
     &:focus {
       outline: none;
-      border-color:#097db7;
+      border-color:$c-primary;
     }
     &:disabled {
       background-color: $c-light-gray-04;
@@ -51,7 +52,7 @@ $module: 'milk-input';
   }
   &__icon {
     position: absolute;
-    right: 5px;
+    right: 8px;
     cursor: pointer;
     width: 24px;
     line-height: 24px;

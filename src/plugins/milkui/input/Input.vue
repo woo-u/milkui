@@ -1,7 +1,8 @@
 <template>
   <div
     :style="{width: width+'px'}"
-    :class="`milk-input milk-input--${valid ? 'valid' : 'invalid'} ${disabled ? 'milk-input--disabled': ''}`">
+    :class="`milk-input milk-input--${valid ? 'valid' : 'invalid'} ${disabled ? 'milk-input--disabled': ''}`"
+  >
     <label v-on:mouseover="isHover = true" v-on:mouseleave="isHover = false">
       <span class="milk-input__label mt-font--caption20 mt--neutrals-dark-gray-02">{{label}}</span>
       <input
@@ -11,72 +12,91 @@
         @keyup="handleInputChange"
         @focus="handleInputFocus"
         @click="handleInputClick"
-        :name="name" :id="name"
+        :name="name"
+        :id="name"
         :type="type"
         :placeholder="placeholder"
         :required="required"
         :disabled="disabled"
         :style="{width: width+'px'}"
-        class="milk-font--body10"/>
+        class="milk-font--body10"
+      />
       <textarea
         v-if="type === 'textarea'"
         :style="{width: width+'px'}"
         @focus="resizeTextarea"
         @keyup="resizeTextarea"
+        :placeholder="placeholder"
+        :rows="rows"
         class="milk-font--body10"
-        :value="selfModel"></textarea>
+        :value="selfModel"
+      ></textarea>
       <span
         v-if="!valid"
         :style="{width: width+'px'}"
-        class="milk-input__invalid-msg mt--bg--error milk--strawberry milk-font--caption10">
-        Lorem ipsum dolor sit amet, consectetur
-      </span>
+        class="milk-input__invalid-msg mt--bg--error milk--strawberry milk-font--caption10"
+      >{{inValidMsg}}</span>
       <span
         :style="{width: width+'px'}"
-        class="milk-input__caption milk-font--caption10 milk--dark-gray">{{caption}}</span>
-      <i 
-        v-if="clearble && selfModel.length > 0" 
-        @click="handleClickClear" 
+        class="milk-input__caption milk-font--caption10 milk--dark-gray"
+      >{{caption}}</span>
+      <i
+        v-if="clearble && selfModel && selfModel.length > 0"
+        @click="handleClickClear"
         :class="`milk-input__icon mk-closed`"
-        :style="clearbleStyle" />
-      <i 
-        v-if="icon" 
+        :style="clearbleStyle"
+      />
+      <i
+        v-if="icon"
         @click="handleClickIcon"
         :class="`milk-input__icon mk-${icon}`"
-        :style="{top: label ? '30px' : '11px'}"/>
-      
+        :style="{top: label ? '30px' : '11px'}"
+      />
     </label>
   </div>
 </template>
 <script>
 export default {
-  name: 'milk-input',
+  name: "milk-input",
   model: {
-    prop: 'value',
-    event: 'change'
+    prop: "value",
+    event: "change"
   },
   props: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     value: {
       type: [String, Number],
-      default: ''
+      default: ""
     },
     label: {
-      type: String,
+      type: String
     },
     type: {
       type: String,
-      validator: function (value) {
+      validator: function(value) {
         // The value must match one of these strings
-        return ['text', 'textarea', 'date', 'datetime-local', 'email', 'file', 'hidden', 'month', 'number', 'password'].indexOf(value) !== -1
+        return (
+          [
+            "text",
+            "textarea",
+            "date",
+            "datetime-local",
+            "email",
+            "file",
+            "hidden",
+            "month",
+            "number",
+            "password"
+          ].indexOf(value) !== -1
+        );
       },
-      default: 'text'
+      default: "text"
     },
     placeholder: {
-      type: String,
+      type: String
     },
     required: {
       type: Boolean,
@@ -99,80 +119,82 @@ export default {
     },
     inValidMsg: {
       type: String,
-      default: 'not valid'
+      default: "not valid"
     },
     clearble: {
       type: Boolean,
       default: false
     },
     icon: {
-      type: String,
+      type: String
     },
-
+    rows: {
+      type: [String, Number],
+      default: 1
+    }
   },
   inject: {
     selectOption: {
       type: Object,
-      default: function(){
+      default: function() {
         return {
           focusable: true
-        }
+        };
       }
     }
   },
-  data(){
+  data() {
     return {
-      selfModel: '',
-      isHover: false,
-    }
+      selfModel: "",
+      isHover: false
+    };
   },
   computed: {
-    clearbleStyle(){
-      let style = {top: this.label ? '30px' : '11px', right: '5px'}
-      if(this.icon) style.right = '29px'
-      return style
+    clearbleStyle() {
+      let style = { top: this.label ? "30px" : "11px", right: "5px" };
+      if (this.icon) style.right = "29px";
+      return style;
     }
   },
   methods: {
-    handleClickClear(evt){
-      if (evt) evt.preventDefault()
-      this.selfModel = ''
-      this.$emit('clear', evt)
-      this.$emit('change', '', evt)
+    handleClickClear(evt) {
+      if (evt) evt.preventDefault();
+      this.selfModel = "";
+      this.$emit("clear", evt);
+      this.$emit("change", "", evt);
     },
-    handleInputChange(evt){
-      this.selfModel = evt.target.value
-      this.$emit('update:value', evt.target.value)
-      this.$emit('change', evt.target.value, evt)
+    handleInputChange(evt) {
+      this.selfModel = evt.target.value;
+      this.$emit("update:value", evt.target.value);
+      this.$emit("change", evt.target.value, evt);
     },
-    handleClickIcon(evt){
-      this.$emit('clickIcon', evt)
+    handleClickIcon(evt) {
+      this.$emit("clickIcon", evt);
     },
-    handleInputClick(evt){
-      this.$emit('click', evt)
+    handleInputClick(evt) {
+      this.$emit("click", evt);
     },
-    handleInputFocus(evt){
-      if(!this.selectOption.focusable) evt.target.blur()
+    handleInputFocus(evt) {
+      if (!this.selectOption.focusable) evt.target.blur();
     },
-    resizeTextarea(evt){
+    resizeTextarea(evt) {
       this.$nextTick(function() {
-        let currentTextarea = evt.target
-        currentTextarea.style.height = '';
-        currentTextarea.style.height = currentTextarea.scrollHeight + 2 + 'px'
-      })
+        let currentTextarea = evt.target;
+        currentTextarea.style.height = "";
+        currentTextarea.style.height = currentTextarea.scrollHeight + 2 + "px";
+      });
     }
   },
   mounted() {
-    this.selfModel = this.value
+    this.selfModel = this.value;
   },
   watch: {
-    value: function(val){
-      this.selfModel = val
-      this.$emit('update:value', val)
+    value: function(val) {
+      this.selfModel = val;
+      this.$emit("update:value", val);
     }
   }
-}
+};
 </script>
 <style lang='scss' src="./Input.scss">
-
 </style>
