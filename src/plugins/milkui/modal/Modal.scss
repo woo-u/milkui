@@ -1,0 +1,152 @@
+$module: 'sg-modal';
+
+@keyframes slide {
+  100% { right: 0; }
+}
+
+@keyframes fadeIn {
+  0% {  opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@keyframes slideUp {
+  0% { bottom: -20px;  opacity: 0;}
+  100% { bottom: 0px;  opacity: 1;}
+}
+
+@keyframes slideUp2 {
+  0% { transform: translateY(100%);  opacity: 0;}
+  100% { transform: translateY(0);  opacity: 1;}
+}
+
+body {
+}
+
+.#{$module} {
+  // This is modal bg
+  background-color: rgba(0,0,0,.7);
+  top: 0; right: 0; bottom: 0; left: 0;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  transition: all 0.2s;
+
+  &__dialog{
+    position: absolute;
+    top: 75px;
+    margin-bottom: 75px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-sizing: border-box;
+  }
+
+  &__header {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.29;
+    color: #767676;
+    //padding: 16px 16px 0 25px;
+    position: relative;
+    overflow: visible;
+
+    margin: 39px 34px 0 34px;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0;
+    padding-bottom: 22px;
+  }
+  &__close {
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #1f1f1f;
+    padding: 9px 15px;
+
+  }
+  &__body {
+    padding: 25px;
+    min-height: 150px;
+    max-height: 686px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  &__footer {
+    text-align: right;
+    padding: 25px;
+    padding-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
+  .width--name {
+    width: auto !important;
+  }
+}
+
+.#{$module}--full{
+
+  animation: fadeIn .2s forwards;
+
+  transition: 0.2s;
+
+  opacity: 0;
+  .modal-opened & {
+    transition: 0.2s;
+  }
+  .#{$module}__dialog { 
+    opacity: 0;
+    animation: slideUp2 .5s forwards cubic-bezier(.02,1.02,.27,.99);
+    animation-delay: .1s;
+    width: 100%; 
+    height: 100%; 
+    transition: 0.2s;
+    .modal-opened & {
+      transition: 0.2s;
+    }
+    top: 0; 
+    border-radius: 0; 
+    >.#{$module}__body {
+      padding: 0;
+    }
+  }
+}
+
+.#{$module}--small{
+  .#{$module}__dialog { width: 400px; }
+}
+.#{$module}--large{
+  .#{$module}__dialog {
+    width: 79%;
+    min-width: 960px;
+    max-width: 1266px;
+  }
+}
+.#{$module}--half-right{
+  >.#{$module}__dialog {
+    width: 60%;
+    min-height: 100%;
+    left: auto;
+    right: -60%;
+    top: 0;
+    border-radius: 0;
+    animation: slide .2s ;
+    animation-delay: 0s;
+    >.#{$module}__body {
+      padding: 25px 34px;
+      max-height: calc(100vh - 141px);
+    }
+  }
+}
+
+.#{$module}--yscroll{
+  overflow-y: scroll;
+  >.#{$module}__dialog > .#{$module}__body {
+    max-height: max-content;
+  }
+}
