@@ -1,6 +1,6 @@
 <template>
   <div id="content" class="milk-input-page">
-    <h2 class="milk-font--title20">Input</h2>
+    <h2 class="milk-font--title20">Text field</h2>
     <nav>
       <div :class="nav === 'code' ? 'active': ''" @click="nav = 'code'">Code</div>
       <div :class="nav === 'style' ? 'active': ''" @click="nav = 'style'">Style</div>
@@ -13,7 +13,7 @@
           name="label-input"
           v-model="labelModel"
           label="Field label"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
         />
       </div>
       <app-code-box :code="labelCode" />
@@ -24,7 +24,7 @@
           name="caption-input"
           v-model="captionModel"
           label="Field label"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
           caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
       </div>
@@ -36,21 +36,21 @@
           name="textarea-input1"
           type="textarea"
           v-model="textareaModel1"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
         />
         <milk-input
           name="textarea-input2"
           type="textarea"
           rows="2"
           v-model="textareaModel2"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
         />
         <milk-input
           name="textarea-input2"
           type="textarea"
           rows="5"
           v-model="textareaModel3"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
         />
       </div>
       <app-code-box :code="textareaCode" />
@@ -60,7 +60,7 @@
         <milk-input
           name="disabled-input"
           v-model="disabledModel"
-          placeholder="Enter your details heres"
+          placeholder="Enter your details here"
           :disabled="true"
         />
       </div>
@@ -71,17 +71,17 @@
         <milk-input name="icon-input" v-model="iconModel" placeholder="Search" icon="search" />
       </div>
       <app-code-box :code="iconCode" />
-      <!--Clearble input-->
-      <h3 class="milk-font--title10">Clearble</h3>
+      <!--Clearable input-->
+      <h3 class="milk-font--title10">Clearable</h3>
       <div class="ui-box milk--border--light-gray-01">
         <milk-input
-          name="clearble-input"
-          v-model="clearbleModel"
-          clearble
-          placeholder="Enter your details heres"
+          name="clearable-input"
+          v-model="clearableModel"
+          clearable
+          placeholder="Enter your details here"
         />
       </div>
-      <app-code-box :code="clearbleCode" />
+      <app-code-box :code="clearableCode" />
       <!--Invalid input-->
       <h3 class="milk-font--title10">Invalid</h3>
       <div class="ui-box milk--border--light-gray-01">
@@ -90,7 +90,7 @@
           v-model="invalidModel"
           :valid="valid"
           placeholder="Enter only text"
-          inValidMsg="Enter only text"
+          inValidMsg="Incorrect - Enter only text"
         />
       </div>
       <app-code-box :code="invalidCode" />
@@ -198,13 +198,13 @@ export default {
       textareaModel3: null,
       disabledModel: null,
       iconModel: null,
-      clearbleModel: null,
+      clearableModel: null,
       invalidModel: "333",
       styleColor: require("../assets/input/img-textinput-color.svg"),
       styleSizing: require("../assets/input/img-textinput-sizing.svg"),
       labelCode: `<template>
   <div>
-    <milk-input name="label-input" v-model="labelModel" placeholder="Enter your details heres" />
+    <milk-input name="label-input" v-model="labelModel" placeholder="Enter your details here" />
   </div>
 </template>
 <script>
@@ -222,7 +222,7 @@ export default {
       name="caption-input"
       v-model="captionModel"
       label="Field label"
-      placeholder="Enter your details heres"
+      placeholder="Enter your details here"
       caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     />
   </div>
@@ -241,27 +241,27 @@ export default {
   name="textarea-input1"
   type="textarea"
   v-model="textareaModel1"
-  placeholder="Enter your details heres"
+  placeholder="Enter your details here"
 />
 <milk-input
   name="textarea-input2"
   type="textarea"
   rows="2"
   v-model="textareaModel2"
-  placeholder="Enter your details heres"
+  placeholder="Enter your details here"
 />
 <milk-input
   name="textarea-input3"
   type="textarea"
   rows="5"
   v-model="textareaModel3"
-  placeholder="Enter your details heres"
+  placeholder="Enter your details here"
 />`,
       disabledCode: `
 <milk-input
   name="disabled-input"
   v-model="disabledModel"
-  placeholder="Enter your details heres"
+  placeholder="Enter your details here"
   :disabled="true"
 />`,
       iconCode: `
@@ -271,8 +271,8 @@ export default {
   placeholder="Search"
   icon="search"
 />`,
-      clearbleCode: `
-<milk-input name="clearble-input" v-model="clearbleModel" clearble placeholder="Enter your details heres"/>`,
+      clearableCode: `
+<milk-input name="clearable-input" v-model="clearableModel" clearable placeholder="Enter your details here"/>`,
       invalidCode: `<template>
   <div>
     <milk-input
@@ -280,7 +280,7 @@ export default {
       v-model="invalidModel"
       :valid="valid"
       placeholder="Enter only text"
-      inValidMsg="Enter only text"
+      inValidMsg="Incorrect - Enter only text"
     />
   </div>
 </template>

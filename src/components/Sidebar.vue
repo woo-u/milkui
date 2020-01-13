@@ -52,7 +52,7 @@ export default {
         { label: "Breadcrumbs", route: "breadcrumbs" },
         // {label: 'Confirm', route: 'confirm'},
         { label: "Select", route: "select" },
-        { label: "Text Input", route: "input" }
+        { label: "Text field", route: "input" }
       ]
     };
   },
