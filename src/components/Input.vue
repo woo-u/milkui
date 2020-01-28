@@ -90,7 +90,7 @@
           v-model="invalidModel"
           :valid="valid"
           placeholder="Enter only text"
-          inValidMsg="Incorrect - Enter only text"
+          inValidMsg="Incorrect"
         />
       </div>
       <app-code-box :code="invalidCode" />
@@ -280,7 +280,7 @@ export default {
       v-model="invalidModel"
       :valid="valid"
       placeholder="Enter only text"
-      inValidMsg="Incorrect - Enter only text"
+      inValidMsg="Incorrect"
     />
   </div>
 </template>
