@@ -27,7 +27,7 @@ $module: 'milk-input';
 
   }
   ::placeholder {
-    color: $c-gray;
+    color: $c-light-gray-01;
   }
   &__label {
     font-weight: bold;
@@ -74,6 +74,14 @@ $module: 'milk-input';
 .#{$module}--disabled {
   ::placeholder {
     color: $c-light-gray-01;
+  }
+  input, textarea {
+    &:focus {
+      border-color: $c-light-gray-01;
+    }
+    &:hover {
+      border-color: $c-light-gray-01;
+    }
   }
   .milk-input__icon { color: $c-light-gray-01; }
 }

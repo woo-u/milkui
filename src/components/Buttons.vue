@@ -9,48 +9,72 @@
       <!--Primary button-->
       <h3 class="milk-font--title10">Primary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
-        <milk-button @click="handleClick" type="primary">Primary Button</milk-button>
-        <milk-button type="primary" disabled @click="handleClick">Primary Button</milk-button>
+        <milk-button type="primary">Primary Button</milk-button>
+        <milk-button type="primary" disabled>Primary Button</milk-button>
       </div>
-      <app-code-box :code="primaryCode"/>
+      <app-code-box :code="primaryCode" />
 
       <!--Secondary button-->
       <h3 class="milk-font--title10">Secondary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
-        <milk-button @click="handleClick" type="secondary">Secondary button</milk-button>
-        <milk-button disabled @click="handleClick">Secondary button</milk-button>
+        <milk-button type="secondary">Secondary button</milk-button>
+        <milk-button disabled>Secondary button</milk-button>
       </div>
-      <app-code-box :code="secondaryCode"/>
+      <app-code-box :code="secondaryCode" />
 
       <!--Small primary button-->
       <h3 class="milk-font--title10">Small Primary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
-        <milk-button @click="handleClick" type="primary" size="small">primary button</milk-button>
-        <milk-button type="primary" disabled @click="handleClick" size="small">primary button</milk-button>
+        <milk-button type="primary" size="small">primary button</milk-button>
+        <milk-button type="primary" disabled size="small">primary button</milk-button>
       </div>
-      <app-code-box :code="primarySamllCode"/>
+      <app-code-box :code="secondarySamllCode" />
 
       <!--Small secondary button-->
       <h3 class="milk-font--title10">Small Secondary Button</h3>
       <div class="ui-box milk--border--light-gray-01">
-        <milk-button @click="handleClick" type="secondary" size="small">secondary button</milk-button>
-        <milk-button type="secondary" disabled @click="handleClick" size="small">secondary button</milk-button>
+        <milk-button type="secondary" size="small">secondary button</milk-button>
+        <milk-button type="secondary" disabled size="small">secondary button</milk-button>
       </div>
-      <app-code-box :code="secondarySamllCode"/>
+      <app-code-box :code="secondarySamllCode" />
+
+      <!--Error button-->
+      <h3 class="milk-font--title10">Error Button</h3>
+      <div class="ui-box milk--border--light-gray-01">
+        <milk-button type="primary" color="error">primary button</milk-button>
+        <milk-button type="secondary" color="error">secondary button</milk-button>
+      </div>
+      <app-code-box :code="errorCode" />
+
+      <!--Success button-->
+      <h3 class="milk-font--title10">Success Button</h3>
+      <div class="ui-box milk--border--light-gray-01">
+        <milk-button type="primary" color="success">primary button</milk-button>
+        <milk-button type="secondary" color="success">secondary button</milk-button>
+      </div>
+      <app-code-box :code="successCode" />
+
+      <!--Warning button-->
+      <h3 class="milk-font--title10">Warning Button</h3>
+      <div class="ui-box milk--border--light-gray-01">
+        <milk-button type="primary" color="warning">primary button</milk-button>
+        <milk-button type="secondary" color="warning">secondary button</milk-button>
+      </div>
+      <app-code-box :code="warningCode" />
 
       <!--Subtle button-->
       <h3 class="milk-font--title10">Subtle Button</h3>
       <div class="ui-box milk--border--light-gray-01">
-        <milk-button @click="handleClick" type="subtle">Subtle</milk-button>
-        <milk-button type="subtle" disabled @click="handleClick">Subtle</milk-button>
+        <milk-button type="subtle">Subtle</milk-button>
+        <milk-button type="subtle" disabled>Subtle</milk-button>
       </div>
-      <app-code-box :code="subtleCode"/>
+      <app-code-box :code="subtleCode" />
     </div>
 
     <div v-if="nav === 'style'" class="nav-style">
       <h3 class="milk-font--title10">Colors</h3>
       <div>
-        <img :src="stylePrimary">
+        <img :src="stylePrimary" />
         <div class="style-box">
           <ul>
             <li>
@@ -84,7 +108,7 @@
         </div>
       </div>
       <div>
-        <img :src="styleSecondary">
+        <img :src="styleSecondary" />
         <div class="style-box">
           <ul>
             <li>Default</li>
@@ -109,7 +133,7 @@
         </div>
       </div>
       <div>
-        <img :src="styleSubtle">
+        <img :src="styleSubtle" />
         <div class="style-box">
           <ul>
             <li>Default</li>
@@ -132,7 +156,7 @@
 
       <h3 class="milk-font--title10 title-sizing">Sizing</h3>
       <div>
-        <img :src="styleMedium">
+        <img :src="styleMedium" />
         <div class="style-box">
           <ul>
             <li>
@@ -149,7 +173,7 @@
         </div>
       </div>
       <div>
-        <img :src="styleSmall">
+        <img :src="styleSmall" />
         <div class="style-box">
           <ul>
             <li>
@@ -192,6 +216,12 @@ export default {
 <milk-button type="secondary" disabled size="small">secondary button</milk-button>`,
       subtleCode: `<milk-button type="subtle">Subtle</milk-button>
 <milk-button type="subtle" disabled>Subtle</milk-button>`,
+      errorCode: `<milk-button type="primary" color="error">primary button</milk-button>
+<milk-button type="secondary" color="error">secondary button</milk-button>`,
+      successCode: `<milk-button type="primary" color="success">primary button</milk-button>
+<milk-button type="secondary" color="success">secondary button</milk-button>`,
+      warningCode: `<milk-button type="primary" color="warning">primary button</milk-button>
+<milk-button type="secondary" color="warning">secondary button</milk-button>`,
       stylePrimary: require("../assets/buttons/btn-style-color-primary.png"),
       styleSecondary: require("../assets/buttons/btn-style-color-secondary.png"),
       styleSubtle: require("../assets/buttons/btn-style-color-subtle.svg"),
