@@ -1,0 +1,81 @@
+@import "../styles/Variables";
+$module: 'milk-toast';
+
+.#{$module} {
+  width: 400px;
+  border-radius: 2px;
+  background-color: #F3EFED;
+  border: solid 2px $c-primary;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  transition:top .5s;
+  padding: 16px;
+  font-size: 16px;
+  &__title {
+    width: 251px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $c-black;
+  }
+
+  &__content{
+    margin-top: 4px;
+    color: $c-dark-gray;
+    line-height: 24px;
+    width: 344px;
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 6px;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.#{$module}--error {
+  border-color: $c-strawberry;
+  background-color: #FEF0F2;
+}
+
+.#{$module}--warning {
+  border-color: $c-banana;
+  background-color: #FFFBF0;
+}
+
+.#{$module}--success {
+  border-color: $c-melon;
+  background-color: #E9FAF6;
+}
+
+.flag-error {
+  width: 107.1px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+// .slide-fade-leave-active {
+//   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+// }
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}

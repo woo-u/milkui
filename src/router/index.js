@@ -72,6 +72,11 @@ export default new Router({
       name: 'input',
       component: () => AsyncComponent('Input'),
     },
+    {
+      path: '/notification',
+      name: 'notification',
+      component: () => AsyncComponent('Notification'),
+    },
 
   ]
 })
