@@ -15,6 +15,7 @@ $module: 'milk-button';
   vertical-align: top;
   background-color: #fff;
   min-width: 150px;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
@@ -165,6 +166,7 @@ $module: 'milk-button';
   font-size: 12px;
   font-weight: 500;
   border-width: 1px;
+  min-width: auto;
   .inner {
     padding: 9px 12px;//12px 16px;
   }
