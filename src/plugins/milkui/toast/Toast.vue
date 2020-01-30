@@ -5,11 +5,11 @@
       v-if="visibleFlag"
       class="milk-toast mt-zindex--top"
       :class="'milk-toast--'+type"
-      :style="{top:mtNotiPositionTop + 'px'}"
+      :style="{top:positionTop + 'px'}"
     >
-      <i v-if="type !== 'basic'" :class="`milk-toast__icon mk-${iconName}`" />
+      <i v-if="type !== 'basic'" :class="`milk-toast__type mk-${iconName}`" />
       <span class="milk-toast__title">{{title}}</span>
-      <i @click="handleClickClose" :class="`milk-toast__icon mk-closed`" />
+      <i @click="handleClickClose" :class="`milk-toast__close mk-closed`" />
       <div class="milk-toast__content">{{content}}</div>
     </div>
   </transition>
@@ -41,9 +41,9 @@ export default {
   computed: {
     iconName() {
       let icon = "basic-circle";
-      if (this.type == "error") icon = "error-circle";
-      if (this.type == "success") icon = "success-circle";
-      if (this.type == "warning") icon = "warning-circle";
+      if (this.type == "error") icon = "error-circle-fill";
+      if (this.type == "success") icon = "check-circle-fill";
+      if (this.type == "warning") icon = "warning-triangle-fill";
       return icon;
     }
   },

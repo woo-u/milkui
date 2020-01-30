@@ -15,6 +15,19 @@
         <milk-button type="primary" @click="handleClickWarningToast" color="warning">Warning toast</milk-button>
       </div>
       <app-code-box :code="toastCode" />
+
+      <!--Inline-->
+      <h3 class="milk-font--title10">Inline</h3>
+      <div class="ui-box milk--border--light-gray-01">
+        <milk-inline-noti
+          title="Notification title"
+          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        />
+        <milk-inline-noti title="Notification title" content="Subtitle text" type="error" />
+        <milk-inline-noti title="Notification title" content="Subtitle text" type="success" />
+        <milk-inline-noti title="Notification title" content="Subtitle text" type="warning" />
+      </div>
+      <app-code-box :code="inlineCode" />
     </div>
     <!-- End nav code-->
 
@@ -136,7 +149,14 @@ export default {
       }
     }
   };
-<\/script>`
+<\/script>`,
+      inlineCode: `<milk-inline-noti
+  title="Notification title"
+  content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+/>
+<milk-inline-noti title="Notification title" content="Subtitle text" type="error" />
+<milk-inline-noti title="Notification title" content="Subtitle text" type="success" />
+<milk-inline-noti title="Notification title" content="Subtitle text" type="warning" />`
     };
   },
 
@@ -145,16 +165,30 @@ export default {
       this.$milkToast(this.title, this.content);
     },
     handleClickErrorToast() {
-      this.$milkToast(this.title, this.content, { type: "error" });
+      this.$milkToast(this.title, this.content, {
+        type: "error",
+        autoClose: false
+      });
     },
     handleClickSuccessToast() {
-      this.$milkToast(this.title, this.content, { type: "success" });
+      this.$milkToast(this.title, this.content, {
+        type: "success",
+        autoClose: false
+      });
     },
     handleClickWarningToast() {
-      this.$milkToast(this.title, this.content, { type: "warning" });
+      this.$milkToast(this.title, this.content, {
+        type: "warning",
+        autoClose: false
+      });
     }
   }
 };
 </script>
 <style lang='scss'>
+.milk-inline-noti {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
 </style>

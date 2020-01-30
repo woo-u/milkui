@@ -8,6 +8,7 @@ import MilkSelect from './select/MilkSelect.vue'
 import MilkInput from './input/Input.vue'
 import MilkModal from './modal/Modal.vue'
 import MilkToast from './toast/'
+import MilkInlineNoti from './inline-noti/InlineNoti.vue'
 
 const components = [
   MilkButton,
@@ -18,6 +19,7 @@ const components = [
   MilkSelect,
   MilkInput,
   MilkModal,
+  MilkInlineNoti,
 ]
 
 const MilkUI = {

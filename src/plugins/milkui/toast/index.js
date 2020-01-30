@@ -38,7 +38,7 @@ const showNextMessage = () => {
       positionTop = 20 + (messageQueue.length - 1) * positionTopGap
 
       let options = currentMessage.options
-      options.mtNotiPositionTop = positionTop
+      options.positionTop = positionTop
       options.toastId = countQ
       for (let prop in options) {
         if (options.hasOwnProperty(prop)) {
@@ -72,7 +72,7 @@ MilkToast.rePosition = (targetId) => {
   })
   messageQueue = newMessageQue
   messageQueue.map((message, index) => {
-    message.instance.mtNotiPositionTop = 20 + index * positionTopGap
+    message.instance.positionTop = 20 + index * positionTopGap
     let ele = document.getElementById(`milk-toast-${message.instance.toastId}`)
     ele.style.top = 20 + index * positionTopGap + 'px'
   })
