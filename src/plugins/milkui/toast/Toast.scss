@@ -1,0 +1,94 @@
+@import "../styles/Variables";
+$module: 'milk-toast';
+
+.#{$module} {
+  width: 400px;
+  border-radius: 2px;
+  background-color: #F3EFED;
+  border: solid 2px $c-primary;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  transition:top .5s;
+  padding: 16px;
+  font-size: 16px;
+  &__title {
+    width: 251px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $c-black;
+  }
+
+  &__content{
+    margin-top: 4px;
+    color: $c-dark-gray;
+    line-height: 24px;
+    width: 344px;
+  }
+  
+  &__type {
+    font-size: 18px;
+    padding: 3px;
+    margin-right: 16px;
+  }
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 6px;
+  }
+
+}
+.#{$module}--error,
+.#{$module}--warning,
+.#{$module}--success {
+  .#{$module}__content { padding-left: 40px; }
+}
+
+.#{$module}--error {
+  border-color: $c-strawberry;
+  background-color: #FEF0F2;
+  .#{$module}__type {
+    color: $c-strawberry;
+  }
+}
+
+.#{$module}--warning {
+  border-color: $c-banana;
+  background-color: #FFFBF0;
+  .#{$module}__type {
+    color: $c-dark-gray;
+    padding: 3px 2px;
+  }
+  
+}
+
+.#{$module}--success {
+  border-color: $c-melon;
+  background-color: #E9FAF6;
+  .#{$module}__type {
+    color: $c-melon;
+  }
+}
+
+.flag-error {
+  width: 107.1px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+// .slide-fade-leave-active {
+//   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+// }
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}

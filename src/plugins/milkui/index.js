@@ -5,8 +5,10 @@ import MilkCheckBoxGroup from './checkbox-group/CheckBoxGroup.vue'
 import MilkRadio from './radio/Radio.vue'
 import MilkBreadcrumb from './breadcrumb/Breadcrumb.vue'
 import MilkSelect from './select/MilkSelect.vue'
-import Input from './input/Input.vue'
-import Modal from './modal/Modal.vue'
+import MilkInput from './input/Input.vue'
+import MilkModal from './modal/Modal.vue'
+import MilkToast from './toast/'
+import MilkInlineNoti from './inline-noti/InlineNoti.vue'
 
 const components = [
   MilkButton,
@@ -15,8 +17,9 @@ const components = [
   MilkRadio,
   MilkBreadcrumb,
   MilkSelect,
-  Input,
-  Modal,
+  MilkInput,
+  MilkModal,
+  MilkInlineNoti,
 ]
 
 const MilkUI = {
@@ -24,6 +27,7 @@ const MilkUI = {
     components.map(component => {
       Vue.component(component.name, component)
     })
+    Vue.prototype.$milkToast = MilkToast.flag
   }
 };
 

@@ -1,0 +1,73 @@
+@import "../styles/Variables";
+$module: 'milk-inline-noti';
+
+.#{$module} {
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #F3EFED;
+  border: solid 2px $c-primary;
+  padding: 16px;
+  font-size: 16px;
+  text-align: left;
+
+  &__title {
+    line-height: 20px;
+    font-weight: bold;
+    color: $c-black;
+  }
+
+  &__content{
+    margin-top: 4px;
+    color: $c-dark-gray;
+    line-height: 24px;
+  }
+
+  &__type {
+    font-size: 18px;
+    padding: 3px;
+    margin-right: 16px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 6px;
+  }
+}
+
+.#{$module}--error,
+.#{$module}--warning,
+.#{$module}--success {
+  .#{$module}__content {
+    display: inline; 
+    padding-left: 16px; 
+  }
+}
+
+.#{$module}--error {
+  border-color: $c-strawberry;
+  background-color: #FEF0F2;
+  .#{$module}__type {
+    
+    color: $c-strawberry;
+  }
+}
+
+.#{$module}--warning {
+  border-color: $c-banana;
+  background-color: #FFFBF0;
+  .#{$module}__type {
+    color: $c-dark-gray;
+    padding: 3px 2px;
+  }
+}
+
+.#{$module}--success {
+  border-color: $c-melon;
+  background-color: #E9FAF6;
+  .#{$module}__type {
+    color: $c-melon;
+  }
+}
