@@ -231,7 +231,7 @@ export default {
   export default {
     data() {
       return {
-        labelModel: null
+        captionModel: null
       };
     }
   };
