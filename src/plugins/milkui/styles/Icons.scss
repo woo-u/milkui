@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'milk';
-  src:  url('../icon/milk.eot?abilfl');
-  src:  url('../icon/milk.eot?abilfl#iefix') format('embedded-opentype'),
-    url('../icon/milk.ttf?abilfl') format('truetype'),
-    url('../icon/milk.woff?abilfl') format('woff'),
-    url('../icon/milk.svg?abilfl#milk') format('svg');
+  src:  url('../icon/milk.eot?yxiyiw');
+  src:  url('../icon/milk.eot?yxiyiw#iefix') format('embedded-opentype'),
+    url('../icon/milk.ttf?yxiyiw') format('truetype'),
+    url('../icon/milk.woff?yxiyiw') format('woff'),
+    url('../icon/milk.svg?yxiyiw#milk') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,60 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.mk-check-circle-fill:before {
+  content: "\e901";
+}
+.mk-error-circle-fill:before {
+  content: "\e903";
+}
+.mk-warning-triangle-fill:before {
+  content: "\e906";
+}
 .mk-check-circle:before {
   content: "\e900";
-}
-.mk-check-circle-fill .path1:before {
-  content: "\e901";
-  color: rgb(48, 49, 51);
-}
-.mk-check-circle-fill .path2:before {
-  content: "\e902";
-  margin-left: -1em;
-  color: rgb(48, 49, 51);
-}
-.mk-check-circle-fill .path3:before {
-  content: "\e903";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.mk-error-circle-fill .path1:before {
-  content: "\e904";
-  color: rgb(48, 49, 51);
-}
-.mk-error-circle-fill .path2:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(48, 49, 51);
-}
-.mk-error-circle-fill .path3:before {
-  content: "\e906";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.mk-error-circle-fill .path4:before {
-  content: "\e907";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.mk-warning-triangle-fill .path1:before {
-  content: "\e908";
-  color: rgb(48, 49, 51);
-}
-.mk-warning-triangle-fill .path2:before {
-  content: "\e909";
-  margin-left: -1.1171875em;
-  color: rgb(48, 49, 51);
-}
-.mk-warning-triangle-fill .path3:before {
-  content: "\e90a";
-  margin-left: -1.1171875em;
-  color: rgb(255, 255, 255);
-}
-.mk-warning-triangle-fill .path4:before {
-  content: "\e90b";
-  margin-left: -1.1171875em;
-  color: rgb(255, 255, 255);
 }
 .mk-arrow-circle-down:before {
   content: "\e90c";
