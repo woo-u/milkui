@@ -31,7 +31,7 @@
     <p class="milk-font--body20 milk--black">
       Email us (
       <a href="mailto:guruahn@gmail.com">developer</a> /
-      <a href="mailto:elisabet517@naver.com ">designer</a>) or
+      <a href="mailto:elisabet517@naver.com ">designer</a> ) or
       <a href="https://github.com/woo-u/milkui/issues">issue</a> in Github.
     </p>
   </div>

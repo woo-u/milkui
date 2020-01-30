@@ -41,10 +41,10 @@
         class="milk-input__caption milk-font--caption10 milk--dark-gray"
       >{{caption}}</span>
       <i
-        v-if="clearble && selfModel && selfModel.length > 0"
+        v-if="clearable && selfModel && selfModel.length > 0"
         @click="handleClickClear"
         :class="`milk-input__icon mk-closed`"
-        :style="clearbleStyle"
+        :style="clearableStyle"
       />
       <i
         v-if="icon"
@@ -121,7 +121,7 @@ export default {
       type: String,
       default: "not valid"
     },
-    clearble: {
+    clearable: {
       type: Boolean,
       default: false
     },
@@ -150,7 +150,7 @@ export default {
     };
   },
   computed: {
-    clearbleStyle() {
+    clearableStyle() {
       let style = { top: this.label ? "30px" : "11px", right: "5px" };
       if (this.icon) style.right = "29px";
       return style;
