@@ -167,19 +167,19 @@ export default {
     handleClickErrorToast() {
       this.$milkToast(this.title, this.content, {
         type: "error",
-        autoClose: false
+        autoClose: true
       });
     },
     handleClickSuccessToast() {
       this.$milkToast(this.title, this.content, {
         type: "success",
-        autoClose: false
+        autoClose: true
       });
     },
     handleClickWarningToast() {
       this.$milkToast(this.title, this.content, {
         type: "warning",
-        autoClose: false
+        autoClose: true
       });
     }
   }
