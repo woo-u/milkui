@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="540" viewBox="0 0 500 540">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFBFC" d="M0 0h500v540H0z"/>
+        <path fill="#87634D" d="M166 97h18v18h-18z"/>
+        <path d="M166 115h18V97h-18z"/>
+        <path fill="#FFF" d="M174.046 110.925L169 105.764l.625-.606 4.424 4.52 6.611-8.392.623.609z"/>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 97)">
+            <tspan x="26" y="15">Checked</tspan>
+        </text>
+        <path stroke="#87634D" d="M166.5 179.5h17v17h-17z"/>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 179)">
+            <tspan x="26" y="15">Hover</tspan>
+        </text>
+        <g>
+            <path stroke="#DCDFE6" d="M166.5 261.5h17v17h-17z"/>
+            <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 261)">
+                <tspan x="26" y="15">Unchecked</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="#EBECF0" stroke="#DCDFE6" d="M166.5 425.5h17v17h-17z"/>
+            <path d="M166 443h18v-18h-18z"/>
+            <path fill="#909399" d="M174.046 438.925L169 433.764l.625-.606 4.424 4.52 6.611-8.392.623.609z"/>
+            <text fill="#909399" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 425)">
+                <tspan x="26" y="15">Checked disable</tspan>
+            </text>
+        </g>
+        <g>
+            <path fill="#EBECF0" stroke="#DCDFE6" d="M166.5 343.5h17v17h-17z"/>
+            <text fill="#909399" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 343)">
+                <tspan x="26" y="15">Unchecked disable</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
