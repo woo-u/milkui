@@ -122,7 +122,7 @@ export default {
       title: "Notification title",
       content:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      styleColor: require("../assets/toast/Notification-milkui-style-colors.svg"),
+      styleColor: require("../assets/toast/notification-milkui-style-colors.svg"),
       styleSizing: require("../assets/toast/noti_style_sizing.svg"),
       toastCode: `<template>
   <div>

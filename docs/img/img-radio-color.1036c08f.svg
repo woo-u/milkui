@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="540" viewBox="0 0 500 540">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFBFC" d="M0 0h500v540H0z"/>
+        <g fill-rule="nonzero" transform="translate(166 97)">
+            <circle cx="9" cy="9" r="9" fill="#87634D"/>
+            <circle cx="9" cy="9" r="3" fill="#FFF"/>
+        </g>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 97)">
+            <tspan x="26" y="15">Checked</tspan>
+        </text>
+        <circle cx="9" cy="9" r="8.5" fill-rule="nonzero" stroke="#87634D" transform="translate(166 179)"/>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 179)">
+            <tspan x="26" y="15">Hover</tspan>
+        </text>
+        <circle cx="9" cy="9" r="8.5" fill-rule="nonzero" stroke="#DCDFE6" transform="translate(166 261)"/>
+        <text fill="#606266" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 261)">
+            <tspan x="26" y="15">Unchecked</tspan>
+        </text>
+        <g>
+            <g fill-rule="nonzero" transform="translate(166 425)">
+                <circle cx="9" cy="9" r="9" fill="#EBECF0" stroke="#DCDFE6"/>
+                <circle cx="9" cy="9" r="3" fill="#909399"/>
+            </g>
+            <text fill="#909399" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 425)">
+                <tspan x="26" y="15"> Checked disable</tspan>
+            </text>
+        </g>
+        <g>
+            <circle cx="9" cy="9" r="8.5" fill="#EBECF0" fill-rule="nonzero" stroke="#DCDFE6" transform="translate(166 343)"/>
+            <text fill="#909399" font-family="NotoSans-Regular, Noto Sans" font-size="14" transform="translate(166 343)">
+                <tspan x="26" y="15">Unchecked disable</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
