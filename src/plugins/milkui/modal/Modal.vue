@@ -1,30 +1,38 @@
 <template>
   <transition name="dialog-fade">
     <div
-      class="sg-modal sg-zindex--middle"
+      class="milk-modal milk-zindex--middle"
       v-if="visible"
       @click.self="handleWrapperClick"
-      :class="['sg-modal--'+size, yScroll ? 'sg-modal--yscroll' : '']"
-      data-selector="sg-modal"
+      data-selector="milk-modal"
     >
-      <div class="sg-modal__dialog">
-        <div class="sg-modal__header" v-if="headerVisible || title">
+      <div class="milk-modal__dialog">
+        <div class="milk-modal__header" v-if="headerVisible || title">
           <span>{{title}}</span>
           <slot name="header"></slot>
-          <button
-            v-if="closeButton"
-            class="sg-modal__close"
-            size="small"
+          <milk-button
+            v-if="typeof closeButton === 'string'"
+            class="milk-modal__close"
             width="10"
             type="subtle"
             @click="$emit('update:visible', !visible)"
-          >{{typeof closeButton === 'string' ? closeButton : '닫기'}}</button>
+          >{{closeButton}}</milk-button>
+          <milk-button
+            v-if="closeButton && typeof closeButton === 'boolean'"
+            class="milk-modal__close"
+            width="10"
+            type="subtle"
+            @click="$emit('update:visible', !visible)"
+          >
+            <i :class="`mk-closed`"></i>
+          </milk-button>
         </div>
-        <div class="sg-modal__body">
+        <div class="milk-modal__body">
           <slot></slot>
         </div>
-        <footer class="sg-modal__footer" v-if="hasSlotFooter">
-          <slot name="footer"></slot>
+        <footer class="milk-modal__footer" v-if="PrimaryButton || SecondaryButton">
+          <milk-button v-if="SecondaryButton" @click="PrimaryCallback">{{SecondaryButton}}</milk-button>
+          <milk-button v-if="PrimaryButton" @click="SecondaryCallback">{{PrimaryButton}}</milk-button>
         </footer>
       </div>
     </div>
@@ -32,7 +40,7 @@
 </template>
 <script>
 export default {
-  name: "sg-modal",
+  name: "milk-modal",
   props: {
     closeButton: {
       type: [Boolean, String],
@@ -46,27 +54,30 @@ export default {
     },
     headerVisible: {
       type: Boolean,
-      default: false
-    },
-    size: {
-      type: String,
-      require: false,
-      default: "medium"
+      default: true
     },
     title: {
       type: String,
       require: false
     },
-    yScroll: {
-      type: Boolean,
-      default: false
+    PrimaryButton: {
+      type: String
+    },
+    SecondaryButton: {
+      type: String
+    },
+    PrimaryCallback: {
+      type: Function,
+      default: function() {}
+    },
+    SecondaryCallback: {
+      type: String,
+      default: function() {}
     }
   },
 
   data() {
-    return {
-      hasSlotFooter: false
-    };
+    return {};
   },
 
   methods: {
@@ -76,19 +87,14 @@ export default {
     handleClickKeydown(event) {
       if (event.keyCode === 27) this.$emit("update:visible", false);
     },
-    resetFooter() {
-      let that = this;
-      setTimeout(function() {
-        that.hasSlotFooter = !!that.$slots["footer"];
-      });
-    },
+
     open() {
       this.$emit("open");
       document.getElementsByTagName("body")[0].classList.add("modal-opened");
     },
     close() {
       this.$emit("close");
-      let modals = document.querySelectorAll(".sg-modal");
+      let modals = document.querySelectorAll(".milk-modal");
       if (modals.length === 1) {
         document
           .getElementsByTagName("body")[0]
@@ -98,7 +104,6 @@ export default {
   },
 
   mounted() {
-    this.resetFooter();
     this.open();
     window.addEventListener("keydown", this.handleClickKeydown);
   },
@@ -109,7 +114,6 @@ export default {
 
   watch: {
     visible: function(val, oldVal) {
-      this.resetFooter();
       if (!val && !!oldVal) {
         this.close();
       } else {

@@ -45,15 +45,13 @@ export default {
       ],
       components: [
         { label: "Buttons", route: "buttons" },
-        // {label: 'Notification', route: 'notification'},
-        // {label: 'Modals', route: 'modals'},
+        { label: "Notification", route: "notification" },
+        { label: "Modals", route: "modals" },
         { label: "Checkboxes", route: "checkboxes" },
         { label: "Radio Buttons", route: "radios" },
         { label: "Breadcrumbs", route: "breadcrumbs" },
-        // {label: 'Confirm', route: 'confirm'},
         { label: "Select", route: "select" },
-        { label: "Text field", route: "input" },
-        { label: "Notification", route: "notification" }
+        { label: "Text field", route: "input" }
       ]
     };
   },

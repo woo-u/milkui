@@ -77,6 +77,11 @@ export default new Router({
       name: 'notification',
       component: () => AsyncComponent('Notification'),
     },
+    {
+      path: '/modals',
+      name: 'modals',
+      component: () => AsyncComponent('Modals'),
+    },
 
   ]
 })

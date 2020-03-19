@@ -14,8 +14,8 @@ const MilkToastConstructor = Vue.extend(Toast)
 let currentMessage
 let messageQueue = []
 let countQ = 0
-let positionTop = 20
-let positionTopGap = 20 + 120
+let positionTop = 24
+let positionTopGap = 24 + 120
 
 const showNextMessage = () => {
 
@@ -35,7 +35,7 @@ const showNextMessage = () => {
 
       currentMessage = messageQueue[messageQueue.length - 1]
       if (currentMessage.options.autoClose) instance.timeOut = setTimeout(function () { instance.close() }, 3000);
-      positionTop = 20 + (messageQueue.length - 1) * positionTopGap
+      positionTop = 24 + (messageQueue.length - 1) * positionTopGap
 
       let options = currentMessage.options
       options.positionTop = positionTop
@@ -72,9 +72,9 @@ MilkToast.rePosition = (targetId) => {
   })
   messageQueue = newMessageQue
   messageQueue.map((message, index) => {
-    message.instance.positionTop = 20 + index * positionTopGap
+    message.instance.positionTop = 24 + index * positionTopGap
     let ele = document.getElementById(`milk-toast-${message.instance.toastId}`)
-    ele.style.top = 20 + index * positionTopGap + 'px'
+    ele.style.top = 24 + index * positionTopGap + 'px'
   })
 };
 
