@@ -81,11 +81,27 @@ body {
     height: 100%;
   }
   &__footer {
-    text-align: right;
-    padding: 25px;
-    padding-top: 0;
-    border-radius: 0 0 4px 4px;
+    button {
+      width: 50%;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 24px;
+      padding: 20px 0;
+      border: 0;
+    }
   }
+
+  &__primary-button {
+    float: right;
+    background-color: $c-primary;
+    color: $c-white;
+  }
+
+  &__secondary-button {
+    float: left;
+  }
+
   .width--name {
     width: auto !important;
   }

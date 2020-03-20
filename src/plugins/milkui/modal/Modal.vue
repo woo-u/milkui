@@ -30,9 +30,17 @@
         <div class="milk-modal__body">
           <slot></slot>
         </div>
-        <footer class="milk-modal__footer" v-if="PrimaryButton || SecondaryButton">
-          <milk-button v-if="SecondaryButton" @click="PrimaryCallback">{{SecondaryButton}}</milk-button>
-          <milk-button v-if="PrimaryButton" @click="SecondaryCallback">{{PrimaryButton}}</milk-button>
+        <footer class="milk-modal__footer" v-if="primaryButton || secondaryButton">
+          <button
+            v-if="secondaryButton"
+            class="milk-modal__secondary-button"
+            @click="handleClickSecondaryCallback"
+          >{{secondaryButton}}</button>
+          <button
+            v-if="primaryButton"
+            class="milk-modal__primary-button"
+            @click="handleClickPrimaryCallback"
+          >{{primaryButton}}</button>
         </footer>
       </div>
     </div>
@@ -60,17 +68,13 @@ export default {
       type: String,
       require: false
     },
-    PrimaryButton: {
+    primaryButton: {
       type: String
     },
-    SecondaryButton: {
+    secondaryButton: {
       type: String
     },
-    PrimaryCallback: {
-      type: Function,
-      default: function() {}
-    },
-    SecondaryCallback: {
+    secondaryCallback: {
       type: String,
       default: function() {}
     }
@@ -100,6 +104,12 @@ export default {
           .getElementsByTagName("body")[0]
           .classList.remove("modal-opened");
       }
+    },
+    handleClickPrimaryCallback() {
+      this.$emit("primaryCallback");
+    },
+    handleClickSecondaryCallback() {
+      this.$emit("secondaryCallback");
     }
   },
 
