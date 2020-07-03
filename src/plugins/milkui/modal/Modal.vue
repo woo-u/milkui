@@ -2,6 +2,7 @@
   <transition name="dialog-fade">
     <div
       class="milk-modal milk-zindex--middle"
+      :class="`milk-modal--${type}`"
       v-if="visible"
       @click.self="handleWrapperClick"
       data-selector="milk-modal"
@@ -77,6 +78,10 @@ export default {
     secondaryCallback: {
       type: String,
       default: function() {}
+    },
+    type: {
+      type: String,
+      default: "default"
     }
   },
 

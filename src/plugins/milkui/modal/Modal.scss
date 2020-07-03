@@ -26,7 +26,7 @@ body {
 
 .#{$module} {
   // This is modal bg
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.6);
   top: 0; right: 0; bottom: 0; left: 0;
   position: fixed;
   overflow: hidden;
@@ -104,6 +104,21 @@ body {
 
   .width--name {
     width: auto !important;
+  }
+}
+
+.#{$module}--error {
+  .#{$module}__dialog{
+    border: 2px solid $c-strawberry;
+  }
+  .#{$module}__primary-button {
+    background-color: $c-strawberry;
+  }
+  .#{$module}__secondary-button {
+    background-color: $c-white;
+    border-top: 2px solid $c-strawberry;
+    padding: 19px 0;
+    color: $c-strawberry;
   }
 }
 

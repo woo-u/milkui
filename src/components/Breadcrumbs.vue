@@ -19,15 +19,22 @@
         <img :src="imgColor" />
         <div class="style-box">
           <ul>
-            <li><strong>Default</strong></li>
+            <li>
+              <strong>Default</strong>
+            </li>
             <li>Text color: #606266</li>
-            <li><strong>Hover</strong></li>
+            <li>
+              <strong>Hover</strong>
+            </li>
             <li>Text color: #87634D</li>
-            <li><strong>After</strong></li>
+            <li>
+              <strong>After</strong>
+            </li>
             <li>Text color: #76543E</li>
           </ul>
         </div>
-      </div><!--End Color-->
+      </div>
+      <!--End Color-->
       <h3 class="milk-font--title10">Sizing</h3>
       <div>
         <img :src="imgSizing" />
@@ -37,28 +44,30 @@
             <li>Horizontal padding: 4px</li>
           </ul>
         </div>
-      </div><!--End Sizing-->
+      </div>
+      <!--End Sizing-->
     </div>
   </div>
 </template>
 <script>
-import CodeBox from './CodeBox'
+import CodeBox from "./CodeBox";
 export default {
-  name: 'breadcrumbs',
+  name: "breadcrumbs",
   props: {},
   components: {
     AppCodeBox: CodeBox
   },
-  data(){
+  data() {
+    /* eslint-disable */
     return {
-      nav: 'code',
+      nav: "code",
       breadcrums: [
-        {'label': 'Breadcrumb 1'},
-        {'label': 'Breadcrumb 2'},
-        {'label': 'Breadcrumb 3'},
+        { label: "Breadcrumb 1" },
+        { label: "Breadcrumb 2" },
+        { label: "Breadcrumb 3" }
       ],
-      imgColor: require('../assets/breadcrumbs/img-breadcrumbs-color.svg'),
-      imgSizing: require('../assets/breadcrumbs/img-breadcrumbs-sizing.svg'),
+      imgColor: require("../assets/breadcrumbs/img-breadcrumbs-color.svg"),
+      imgSizing: require("../assets/breadcrumbs/img-breadcrumbs-sizing.svg"),
       normalCode: `<template>
   <div>
     <milk-breadcrumb v-model="breadcrums" />
@@ -77,10 +86,9 @@ export default {
     }
   };
 <\/script>`
-    }
+    };
   }
-}
+};
 </script>
 <style lang='scss'>
-
 </style>
