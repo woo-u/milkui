@@ -9,6 +9,8 @@ import MilkInput from './input/Input.vue'
 import MilkModal from './modal/Modal.vue'
 import MilkToast from './toast/'
 import MilkInlineNoti from './inline-noti/InlineNoti.vue'
+import MilkForm from './form/Form.vue'
+import MilkFormItem from './form/FormItem.vue'
 
 const components = [
   MilkButton,
@@ -20,6 +22,8 @@ const components = [
   MilkInput,
   MilkModal,
   MilkInlineNoti,
+  MilkForm,
+  MilkFormItem,
 ]
 
 const MilkUI = {

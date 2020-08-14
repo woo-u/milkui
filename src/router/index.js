@@ -82,6 +82,11 @@ export default new Router({
       name: 'modals',
       component: () => AsyncComponent('Modals'),
     },
+    {
+      path: '/form',
+      name: 'form',
+      component: () => AsyncComponent('Form'),
+    },
 
   ]
 })

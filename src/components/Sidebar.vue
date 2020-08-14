@@ -41,7 +41,7 @@ export default {
       styles: [
         { label: "Colors", route: "colors" },
         { label: "Typography", route: "typography" },
-        { label: "Iconography", route: "iconography" }
+        { label: "Iconography", route: "iconography" },
       ],
       components: [
         { label: "Buttons", route: "buttons" },
@@ -51,8 +51,9 @@ export default {
         { label: "Radio Buttons", route: "radios" },
         { label: "Breadcrumbs", route: "breadcrumbs" },
         { label: "Select", route: "select" },
-        { label: "Text field", route: "input" }
-      ]
+        { label: "Text field", route: "input" },
+        { label: "Form Validation", route: "form" },
+      ],
     };
   },
   computed: {
@@ -71,10 +72,10 @@ export default {
     },
     stylesStyle() {
       return { height: 49 * this.styles.length + "px" };
-    }
+    },
   },
 
-  methods: {}
+  methods: {},
 };
 </script>
 <style scoped lang="scss">

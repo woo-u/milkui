@@ -185,7 +185,7 @@ export default {
   name: "text-input-page",
   props: {},
   components: {
-    AppCodeBox: CodeBox
+    AppCodeBox: CodeBox,
   },
   data() {
     /* eslint-disable */
@@ -303,7 +303,7 @@ export default {
       }
     }
   };
-<\/script>`
+<\/script>`,
     };
   },
 
@@ -313,12 +313,12 @@ export default {
         return false;
       }
       return true;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang='scss'>
-.milk-input {
+.milk-input-page .milk-input {
   margin: 0 auto;
 }
 </style>
